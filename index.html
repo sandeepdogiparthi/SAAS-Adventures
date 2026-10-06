@@ -3,582 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAAS Adventures | Your Home on the Road</title>
-<meta name="description" content="Explore India differently with SAAS Adventures — fully equipped caravans and motorhomes designed for comfortable, flexible and unforgettable road adventures.">
+<title>SAAS Adventures | Farm Stay &amp; Motorhome Travel in India</title>
+<meta name="description" content="SAAS Adventures offers motorhome and caravan rentals (up to 6 or 9 guests), peaceful farmhouse stays and customized adventure trips across India. Travel Freely. Explore More. Create Memories.">
+<link rel="canonical" href="https://www.saasadventures.in/">
 
-<!-- Open Graph -->
-<meta property="og:title" content="SAAS Adventures | Your Home on the Road">
-<meta property="og:description" content="Explore India differently with SAAS Adventures — fully equipped caravans and motorhomes designed for comfortable, flexible and unforgettable road adventures.">
+<meta property="og:title" content="SAAS Adventures | Farm Stay &amp; Motorhome Travel in India">
+<meta property="og:description" content="Motorhome &amp; caravan rentals, farmhouse stays and customized adventure trips across India.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.saasadventures.in/">
 <meta property="og:image" content="https://cryptuasolutions.com/saas/s2.jpeg">
 
-<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
   "name": "SAAS Adventures",
-  "description": "Fully equipped caravans and motorhomes designed for comfortable, flexible and unforgettable road adventures across India.",
-  "areaServed": "IN",
+  "legalName": "SAAS Adventures Pvt. Ltd.",
+  "url": "https://www.saasadventures.in/",
+  "logo": "https://cryptuasolutions.com/saas/s1.jpeg",
+  "image": "https://cryptuasolutions.com/saas/s2.jpeg",
+  "description": "Motorhome and caravan rentals, farmhouse stays and customized adventure trips across India.",
   "slogan": "Travel Freely. Explore More. Create Memories.",
-  "telephone": "+91 77998 82182"
+  "telephone": "+91-93477-60620",
+  "email": "info@saasadventures.com",
+  "areaServed": "IN",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sy. No. 203/AA/1/1, Aloor Village, Chevella",
+    "addressLocality": "Ranga Reddy",
+    "addressRegion": "Telangana",
+    "postalCode": "501503",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 09:00-21:00",
+  "sameAs": []
 }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* ============================================================
-   SAAS ADVENTURES — DESIGN SYSTEM
-   ============================================================ */
-:root{
-  /* --- Palette --- */
-  --forest:        #1E3A2B;
-  --forest-dark:   #12261B;
-  --forest-light:  #335A44;
-  --sand:          #E9DFC7;
-  --sand-dark:     #D8C69C;
-  --ivory:         #FAF6EC;
-  --terracotta:    #C1633A;
-  --terracotta-dark: #9E4E2C;
-  --charcoal:      #26221C;
-  --gold:          #C99A44;
-  --white:         #FFFFFF;
-
-  /* --- Type --- */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* --- Layout --- */
-  --container: 1280px;
-  --gutter: clamp(1.25rem, 5vw, 4rem);
-
-  /* --- Radii / Shadow --- */
-  --r-sm: 10px;
-  --r-md: 18px;
-  --r-lg: 32px;
-  --shadow-sm: 0 2px 10px rgba(18,38,27,0.08);
-  --shadow-md: 0 16px 40px rgba(18,38,27,0.14);
-  --shadow-lg: 0 30px 70px rgba(18,38,27,0.22);
-
-  /* --- Motion --- */
-  --ease: cubic-bezier(.4,0,.2,1);
-  --t-fast: 220ms;
-  --t-med: 420ms;
-  --t-slow: 700ms;
-
-  --header-h: 84px;
-}
-
-*,*::before,*::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
-@media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior: auto; }
-  *,*::before,*::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-}
-
-body{
-  margin:0;
-  font-family: var(--font-body);
-  color: var(--charcoal);
-  background: var(--ivory);
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-img{ max-width:100%; display:block; }
-a{ color: inherit; text-decoration:none; }
-button{ font-family: inherit; cursor:pointer; }
-ul{ margin:0; padding:0; list-style:none; }
-h1,h2,h3,h4{ font-family: var(--font-display); margin:0; line-height:1.12; font-weight:600; letter-spacing:-0.01em; }
-p{ margin:0; }
-input,textarea{ font-family: inherit; }
-
-/* Focus visibility */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-.container{
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
-
-.skip-link{
-  position:absolute; left:-999px; top:0;
-  background: var(--forest); color:#fff; padding: .9rem 1.4rem;
-  z-index: 999; border-radius: 0 0 8px 0; font-weight:600;
-}
-.skip-link:focus{ left:0; }
-
-.eyebrow{
-  display:inline-flex; align-items:center; gap:.6rem;
-  font-size: .78rem; letter-spacing:.18em; text-transform:uppercase;
-  color: var(--terracotta); font-weight:700; margin-bottom: 1rem;
-}
-.eyebrow::before{
-  content:""; width: 26px; height:1.5px; background: var(--terracotta);
-}
-
-.section-head{ max-width: 640px; margin-bottom: clamp(2.5rem,5vw,4rem); }
-.section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
-.section-head h2{ font-size: clamp(2rem, 4vw, 3rem); }
-.section-head p{ margin-top: 1.1rem; font-size: 1.08rem; color: rgba(38,34,28,.72); }
-
-section{ position:relative; }
-
-/* Buttons */
-.btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
-  padding: 1rem 2rem;
-  border-radius: 999px;
-  font-weight:600; font-size: .96rem;
-  border: 1.5px solid transparent;
-  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
-  white-space: nowrap;
-}
-.btn-primary{ background: var(--terracotta); color:#fff; box-shadow: var(--shadow-sm); }
-.btn-primary:hover{ background: var(--terracotta-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-.btn-ghost{ background: transparent; color: var(--ivory); border-color: rgba(250,246,236,.5); }
-.btn-ghost:hover{ background: rgba(250,246,236,.12); border-color: var(--ivory); transform: translateY(-2px); }
-.btn-outline{ background: transparent; color: var(--forest); border-color: var(--forest); }
-.btn-outline:hover{ background: var(--forest); color:#fff; transform: translateY(-2px); }
-.btn-light{ background: var(--ivory); color: var(--forest); }
-.btn-light:hover{ background:#fff; transform: translateY(-2px); box-shadow: var(--shadow-md); }
-
-/* reveal-on-scroll */
-.reveal{ opacity:0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
-.reveal.in{ opacity:1; transform: translateY(0); }
-.reveal-delay-1{ transition-delay: .1s; }
-.reveal-delay-2{ transition-delay: .2s; }
-.reveal-delay-3{ transition-delay: .3s; }
-.reveal-delay-4{ transition-delay: .4s; }
-
-/* ============================================================
-   HEADER
-   ============================================================ */
-.site-header{
-  position: fixed; top:0; left:0; right:0; z-index: 500;
-  height: var(--header-h);
-  display:flex; align-items:center;
-  background: transparent;
-  transition: background var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), height var(--t-med) var(--ease);
-}
-.site-header.scrolled{
-  background: rgba(250,246,236,.94);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-sm);
-  height: 72px;
-}
-.header-inner{ display:flex; align-items:center; justify-content:space-between; width:100%; gap: 1.5rem; }
-
-.brand{ display:flex; align-items:center; gap:.7rem; flex-shrink:0; }
-.brand img{ height: 44px; width:auto; border-radius: 6px; }
-.brand-fallback{
-  height:44px; padding: 0 .9rem; display:flex; align-items:center; justify-content:center;
-  background: var(--forest); color:#fff; border-radius: 8px;
-  font-family: var(--font-display); font-weight:700; letter-spacing:.02em; font-size: 1rem;
-}
-.brand-word{ font-family: var(--font-display); font-weight:700; font-size:1.15rem; color: var(--ivory); transition: color var(--t-med) var(--ease); letter-spacing:.01em; }
-.site-header.scrolled .brand-word{ color: var(--forest); }
-
-.main-nav{ display:flex; align-items:center; gap: clamp(1.2rem,2.4vw,2.4rem); }
-.main-nav a{
-  font-size: .95rem; font-weight:600; color: var(--ivory);
-  position:relative; padding: .3rem 0;
-  transition: color var(--t-med) var(--ease);
-}
-.site-header.scrolled .main-nav a{ color: var(--charcoal); }
-.main-nav a::after{
-  content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0;
-  background: var(--terracotta); transition: width var(--t-fast) var(--ease);
-}
-.main-nav a:hover::after, .main-nav a.active::after{ width:100%; }
-.main-nav a.active{ color: var(--terracotta); }
-.site-header.scrolled .main-nav a.active{ color: var(--terracotta); }
-
-.header-cta{ display:flex; align-items:center; gap: 1rem; }
-.header-cta .btn-primary{ padding: .85rem 1.6rem; font-size:.9rem; }
-
-.hamburger{
-  display:none; background:none; border:none; padding:.5rem; width:44px; height:44px;
-  flex-direction:column; align-items:center; justify-content:center; gap:5px;
-  border-radius: 8px;
-}
-.hamburger span{
-  display:block; width:24px; height:2px; background: var(--ivory);
-  transition: transform var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
-}
-.site-header.scrolled .hamburger span{ background: var(--charcoal); }
-.hamburger[aria-expanded="true"] span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-.hamburger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
-.hamburger[aria-expanded="true"] span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
-
-.mobile-nav{
-  position: fixed; inset: 0; top: var(--header-h);
-  background: var(--forest-dark);
-  transform: translateY(-8px); opacity:0; visibility:hidden;
-  transition: transform var(--t-med) var(--ease), opacity var(--t-med) var(--ease), visibility var(--t-med);
-  z-index: 480;
-  display:flex; flex-direction:column;
-  padding: 2rem var(--gutter) 3rem;
-  overflow-y:auto;
-}
-.mobile-nav.open{ transform: translateY(0); opacity:1; visibility:visible; }
-.mobile-nav a{
-  font-family: var(--font-display); font-size: 1.7rem; color: var(--ivory);
-  padding: .8rem 0; border-bottom: 1px solid rgba(250,246,236,.12);
-}
-.mobile-nav .btn-primary{ margin-top: 2rem; align-self:flex-start; }
-body.menu-open{ overflow:hidden; }
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{
-  position: relative; min-height: 100vh; display:flex; align-items:center;
-  color: var(--ivory); overflow:hidden;
-}
-.hero-media{ position:absolute; inset:0; z-index:0; background: var(--forest-dark); }
-.hero-media img{ width:100%; height:100%; object-fit:cover; object-position: center 60%; }
-.hero-media .fallback-panel{ width:100%; height:100%; }
-.hero-media::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(180deg, rgba(18,38,27,.55) 0%, rgba(18,38,27,.35) 35%, rgba(18,38,27,.75) 100%),
-    linear-gradient(90deg, rgba(18,38,27,.75) 0%, rgba(18,38,27,.15) 55%);
-}
-.hero-content{ position:relative; z-index:2; padding-top: var(--header-h); width:100%; }
-.hero-inner{ max-width: 760px; padding: 4rem 0 6rem; }
-.hero-eyebrow{
-  display:inline-flex; align-items:center; gap:.7rem;
-  font-size:.8rem; letter-spacing:.22em; text-transform:uppercase; font-weight:700;
-  color: var(--sand); margin-bottom: 1.6rem;
-}
-.hero-eyebrow::before{ content:""; width:30px; height:1.5px; background: var(--gold); }
-.hero h1{
-  font-size: clamp(2.6rem, 6.4vw, 5.2rem);
-  color:#fff;
-  font-weight:600;
-}
-.hero h1 em{ font-style: italic; color: var(--sand); font-weight:500; }
-.hero-sub{
-  font-family: var(--font-display); font-style: italic; font-size: clamp(1.2rem,2vw,1.6rem);
-  color: var(--sand); margin-top: 1.1rem; font-weight:500;
-}
-.hero-copy{ margin-top: 1.5rem; font-size: 1.1rem; max-width: 520px; color: rgba(250,246,236,.86); }
-.hero-actions{ display:flex; flex-wrap:wrap; gap: 1rem; margin-top: 2.6rem; }
-
-.scroll-cue{
-  position:absolute; left:50%; bottom: 2.4rem; transform: translateX(-50%);
-  z-index:2; display:flex; flex-direction:column; align-items:center; gap:.6rem;
-  color: var(--sand); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase;
-}
-.scroll-cue .line{
-  width:1px; height: 42px; background: linear-gradient(180deg, rgba(250,246,236,.9), transparent);
-  position:relative; overflow:hidden;
-}
-.scroll-cue .line::after{
-  content:""; position:absolute; top:-100%; left:0; width:100%; height:100%;
-  background: var(--gold); animation: scrollDrop 2.2s var(--ease) infinite;
-}
-@keyframes scrollDrop{ 0%{ top:-100%; } 60%{ top:100%; } 100%{ top:100%; } }
-@media (prefers-reduced-motion: reduce){ .scroll-cue .line::after{ animation:none; top:60%; } }
-
-/* ============================================================
-   ABOUT
-   ============================================================ */
-.about{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--ivory); }
-.about-grid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2.5rem,6vw,5rem); align-items:center; }
-.about-text p{ color: rgba(38,34,28,.78); margin-top: 1.1rem; font-size: 1.03rem; }
-.about-text p:first-of-type{ margin-top: 1.4rem; }
-.about-statement{
-  margin-top: 2.2rem; padding: 1.6rem 1.8rem; border-left: 3px solid var(--terracotta);
-  background: var(--sand); border-radius: 0 var(--r-md) var(--r-md) 0;
-}
-.about-statement p{ font-family: var(--font-display); font-style:italic; font-size: 1.25rem; color: var(--forest); font-weight:500; }
-.about-statement p + p{ margin-top:.5rem; font-size: 1rem; font-style:normal; color: var(--forest-light); font-weight:600; }
-
-.about-media{ position:relative; }
-.about-media-frame{
-  border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--shadow-lg);
-  aspect-ratio: 4/5; position:relative;
-}
-.about-media-frame img{ width:100%; height:100%; object-fit:cover; }
-.about-badge{
-  position:absolute; left: -1.4rem; bottom: -1.4rem;
-  background: var(--forest); color:#fff; border-radius: var(--r-md);
-  padding: 1.4rem 1.6rem; box-shadow: var(--shadow-md);
-  max-width: 230px;
-}
-.about-badge strong{ display:block; font-family: var(--font-display); font-size: 1.6rem; color: var(--sand); }
-.about-badge span{ font-size: .85rem; color: rgba(250,246,236,.8); }
-
-/* ============================================================
-   EXPERIENCE
-   ============================================================ */
-.experience{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--forest); color: var(--ivory); position:relative; }
-.experience::before{
-  content:""; position:absolute; inset:0; opacity:.06; pointer-events:none;
-  background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
-  background-size: 22px 22px;
-}
-.experience .section-head p{ color: rgba(250,246,236,.72); }
-.experience .section-head h2{ color:#fff; }
-.exp-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 1.6rem; position:relative; }
-.exp-card{
-  background: rgba(250,246,236,.06);
-  border: 1px solid rgba(250,246,236,.14);
-  border-radius: var(--r-md);
-  padding: 2.2rem 1.8rem;
-  transition: transform var(--t-med) var(--ease), background var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
-}
-.exp-card:hover{ transform: translateY(-8px); background: rgba(250,246,236,.1); border-color: var(--gold); }
-.exp-icon{
-  width: 54px; height:54px; border-radius: 50%; background: var(--terracotta);
-  display:flex; align-items:center; justify-content:center; margin-bottom: 1.4rem;
-}
-.exp-icon svg{ width:26px; height:26px; stroke: #fff; fill:none; }
-.exp-card h3{ font-size: 1.3rem; color:#fff; margin-bottom:.6rem; }
-.exp-card p{ font-size:.95rem; color: rgba(250,246,236,.72); }
-
-/* ============================================================
-   WHY CHOOSE
-   ============================================================ */
-.why{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--ivory); }
-.why-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 2rem 2.2rem; }
-.why-item{ display:flex; gap: 1.2rem; }
-.why-stamp{
-  flex-shrink:0; width: 62px; height:62px; border-radius:50%;
-  border: 1.5px dashed var(--terracotta);
-  display:flex; align-items:center; justify-content:center;
-  font-family: var(--font-display); font-weight:700; color: var(--terracotta); font-size: 1.3rem;
-}
-.why-item h3{ font-size: 1.18rem; color: var(--forest); margin-bottom:.4rem; }
-.why-item p{ font-size:.95rem; color: rgba(38,34,28,.72); }
-
-/* ============================================================
-   SHOWCASE
-   ============================================================ */
-.showcase{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--sand); }
-.showcase-grid{ display:grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem,5vw,4rem); align-items:center; }
-.showcase-media{ border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--shadow-lg); aspect-ratio: 16/11; }
-.showcase-media img{ width:100%; height:100%; object-fit:cover; }
-.showcase-panel h3{ font-size: clamp(1.6rem,2.6vw,2.1rem); color: var(--forest); }
-.showcase-panel > p{ margin-top: 1rem; color: rgba(38,34,28,.75); font-size: 1.05rem; }
-.badge-row{ display:flex; flex-wrap:wrap; gap:.7rem; margin-top: 2rem; }
-.pill{
-  display:inline-flex; align-items:center; gap:.5rem;
-  padding: .6rem 1.1rem; border-radius:999px; background:#fff;
-  border: 1px solid var(--sand-dark); font-size:.86rem; font-weight:600; color: var(--forest);
-  box-shadow: var(--shadow-sm);
-}
-.pill svg{ width:14px; height:14px; stroke: var(--terracotta); fill:none; }
-
-/* ============================================================
-   EXPLORE INDIA
-   ============================================================ */
-.explore{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--ivory); }
-.explore-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
-.dest-card{
-  position:relative; border-radius: var(--r-md); overflow:hidden; aspect-ratio: 3/4;
-  box-shadow: var(--shadow-sm); background: var(--forest);
-  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
-}
-.dest-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.dest-card img{ width:100%; height:100%; object-fit:cover; transition: transform var(--t-slow) var(--ease); }
-.dest-card:hover img{ transform: scale(1.06); }
-.dest-card::after{
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(180deg, transparent 40%, rgba(18,38,27,.85) 100%);
-}
-.dest-label{
-  position:absolute; left:1.3rem; right:1.3rem; bottom:1.3rem; z-index:2;
-  color:#fff; font-family: var(--font-display); font-size: 1.25rem; font-weight:600;
-}
-.dest-label span{ display:block; font-family: var(--font-body); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color: var(--sand); font-weight:600; margin-top:.3rem; }
-
-/* ============================================================
-   HOW IT WORKS — premium step cards
-   ============================================================ */
-.how{ padding: clamp(5rem,10vw,9rem) 0; background: var(--forest); color: var(--ivory); position:relative; overflow:hidden; }
-.how .section-head h2{ color:#fff; }
-.how .section-head p{ color: rgba(250,246,236,.72); }
-
-.how-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 1.6rem; }
-.how-card{
-  background: rgba(250,246,236,.06);
-  border: 1px solid rgba(250,246,236,.14);
-  border-radius: var(--r-lg);
-  padding: 2.2rem 1.9rem;
-  display:flex; flex-direction:column; height:100%;
-  transition: transform var(--t-med) var(--ease), background var(--t-med) var(--ease), border-color var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
-}
-.how-card-number{
-  font-family: var(--font-display); font-weight:600; font-style:italic;
-  font-size: 1rem; letter-spacing:.06em; color: var(--gold);
-  margin-bottom: 1.6rem;
-}
-.how-icon{
-  width: 56px; height:56px; border-radius: var(--r-md);
-  background: rgba(201,154,68,.14); border: 1px solid rgba(201,154,68,.3);
-  display:flex; align-items:center; justify-content:center;
-  margin-bottom: 1.6rem;
-  transition: background var(--t-med) var(--ease), transform var(--t-med) var(--ease);
-}
-.how-icon svg{ width:26px; height:26px; stroke: var(--gold); fill:none; stroke-width:1.7; }
-.how-card h3{ font-size: 1.22rem; color:#fff; margin-bottom:.6rem; }
-.how-card p{ font-size:.95rem; color: rgba(250,246,236,.72); }
-
-.how-card:hover{
-  transform: translateY(-6px);
-  background: rgba(250,246,236,.1);
-  border-color: var(--gold);
-  box-shadow: var(--shadow-md);
-}
-.how-card:hover .how-icon{ background: rgba(201,154,68,.24); transform: translateY(-2px); }
-@media (prefers-reduced-motion: reduce){
-  .how-card, .how-icon{ transition:none; }
-}
-
-/* ============================================================
-   EMOTIONAL CTA
-   ============================================================ */
-.cta-section{
-  position:relative; padding: clamp(6rem,14vw,10rem) 0; color:#fff; text-align:center;
-  background: var(--forest-dark);
-  overflow:hidden;
-}
-.cta-media{ position:absolute; inset:0; z-index:0; }
-.cta-media img{ width:100%; height:100%; object-fit:cover; opacity:.55; }
-.cta-media::after{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(18,38,27,.65), rgba(18,38,27,.9)); }
-.cta-content{ position:relative; z-index:1; max-width: 680px; margin:0 auto; }
-.cta-content h2{ font-size: clamp(2.3rem,5vw,3.8rem); color:#fff; }
-.cta-content p{ margin-top: 1.3rem; font-size: 1.12rem; color: rgba(250,246,236,.85); }
-.cta-actions{ display:flex; flex-wrap:wrap; justify-content:center; gap: 1.1rem; margin-top: 2.6rem; }
-
-/* ============================================================
-   CONTACT
-   ============================================================ */
-.contact{ padding: clamp(5rem,10vw,8.5rem) 0; background: var(--ivory); }
-.contact-grid{ display:grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2.5rem,6vw,5rem); }
-.contact-info h2{ font-size: clamp(2rem,4vw,2.8rem); color: var(--forest); }
-.contact-info p{ margin-top: 1.1rem; color: rgba(38,34,28,.72); font-size: 1.02rem; }
-
-.whatsapp-panel{
-  background:#fff; border-radius: var(--r-lg); padding: clamp(1.8rem,4vw,2.8rem);
-  box-shadow: var(--shadow-md); border: 1px solid var(--sand-dark);
-  display:flex; flex-direction:column; align-items:flex-start; gap: 1.4rem;
-}
-.whatsapp-card{
-  width:100%; padding: 1.8rem; background: var(--forest); color:#fff;
-  border-radius: var(--r-md); box-shadow: var(--shadow-sm);
-  display:flex; flex-direction:column; gap:.3rem;
-}
-.whatsapp-card strong{ font-family: var(--font-display); font-size: 1.4rem; }
-.whatsapp-card span{ color: rgba(250,246,236,.75); font-size:.95rem; }
-.whatsapp-card .whatsapp-number{
-  margin-top:.6rem; font-family: var(--font-display); font-size: 1.3rem; font-weight:600;
-  color: var(--sand);
-}
-.whatsapp-btn{ width:100%; font-size: 1.02rem; padding: 1.1rem 2rem; }
-.whatsapp-btn svg{ flex-shrink:0; }
-.contact-note{ font-size:.85rem; color: rgba(38,34,28,.55); }
-
-/* ============================================================
-   FLOATING WHATSAPP BUTTON
-   ============================================================ */
-.whatsapp-float{
-  position: fixed;
-  right: max(1.4rem, env(safe-area-inset-right));
-  bottom: max(1.4rem, env(safe-area-inset-bottom));
-  z-index: 600;
-  width: 58px; height: 58px; border-radius: 50%;
-  background: #25D366; color:#fff;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
-}
-.whatsapp-float:hover{ transform: translateY(-3px) scale(1.05); box-shadow: 0 20px 45px rgba(18,38,27,.32); }
-.whatsapp-float svg{ width:28px; height:28px; }
-@media (max-width: 640px){
-  .whatsapp-float{ width:52px; height:52px; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom)); }
-  .whatsapp-float svg{ width:25px; height:25px; }
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.site-footer{ background: var(--forest-dark); color: rgba(250,246,236,.82); padding: clamp(3.5rem,7vw,5.5rem) 0 2rem; }
-.footer-top{ display:grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(250,246,236,.12); }
-.footer-brand .brand{ margin-bottom: 1.1rem; }
-.footer-brand p{ font-family: var(--font-display); font-style:italic; font-size: 1.1rem; color: var(--sand); max-width: 320px; }
-.footer-col h4{ font-family: var(--font-body); font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; color: var(--gold); margin-bottom: 1.2rem; font-weight:700; }
-.footer-col ul li{ margin-bottom: .8rem; }
-.footer-col ul a{ font-size:.96rem; color: rgba(250,246,236,.75); transition: color var(--t-fast) var(--ease); }
-.footer-col ul a:hover{ color:#fff; }
-.footer-tagline{ margin-top: 1rem; font-size:.95rem; color: rgba(250,246,236,.6); }
-.footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 1rem; padding-top: 2rem; font-size:.85rem; color: rgba(250,246,236,.5); }
-
-/* ============================================================
-   IMAGE FALLBACKS
-   ============================================================ */
-.fallback-panel{
-  width:100%; height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.6rem;
-  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
-  color: var(--sand);
-}
-.fallback-panel svg{ width: 48px; height:48px; stroke: var(--sand); fill:none; opacity:.85; }
-.fallback-panel span{ font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; opacity:.85; }
-.dest-card .fallback-panel{ background: linear-gradient(135deg, var(--forest) 0%, var(--terracotta-dark) 100%); }
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 1080px){
-  .exp-grid{ grid-template-columns: repeat(2,1fr); }
-  .why-grid{ grid-template-columns: repeat(2,1fr); }
-  .explore-grid{ grid-template-columns: repeat(2,1fr); }
-  .how-grid{ grid-template-columns: repeat(2,1fr); row-gap: 2.6rem; }
-  .about-grid, .showcase-grid, .contact-grid{ grid-template-columns: 1fr; }
-  .about-media{ order:-1; max-width: 480px; margin: 0 auto; }
-  .footer-top{ grid-template-columns: 1fr 1fr; }
-  .footer-brand{ grid-column: 1 / -1; }
-}
-
-@media (max-width: 1000px){
-  .main-nav, .header-cta .btn-primary{ display:none; }
-  .hamburger{ display:flex; }
-}
-
-@media (max-width: 640px){
-  :root{ --header-h: 72px; }
-  .exp-grid, .why-grid, .explore-grid, .how-grid{ grid-template-columns: 1fr; }
-  .hero-actions{ flex-direction:column; align-items:stretch; }
-  .hero-actions .btn{ width:100%; }
-  .cta-actions{ flex-direction:column; align-items:stretch; }
-  .cta-actions .btn{ width:100%; }
-  .about-badge{ left: 1rem; bottom:-1.2rem; padding: 1rem 1.2rem; }
-  .footer-top{ grid-template-columns: 1fr; }
-  .footer-bottom{ flex-direction:column; align-items:flex-start; }
-}
-</style>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
+<!-- ============================ HEADER ============================ -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="#home" class="brand" aria-label="SAAS Adventures home">
@@ -587,19 +59,18 @@ body.menu-open{ overflow:hidden; }
       <span id="brandFallback" class="brand-fallback" style="display:none;">SA</span>
       <span class="brand-word">SAAS Adventures</span>
     </a>
-
     <nav class="main-nav" aria-label="Primary">
-      <!-- <a href="#home">Home</a> -->
-      <a href="#about">About Us</a>
-      <a href="#experience">Experience</a>
-      <a href="#why">Why SAAS</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#motorhomes">Motorhomes</a>
+      <a href="farmhouse.html">Farm Stays</a>
       <a href="#explore">Explore India</a>
       <a href="#how">How It Works</a>
       <a href="#contact">Contact</a>
     </nav>
-
     <div class="header-cta">
-      <a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'm%20interested%20in%20your%20motorhome%2Fcaravan%20experience%20and%20would%20like%20to%20know%20more%20about%20availability%2C%20pricing%20and%20the%20booking%20process." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Start Your Adventure — Chat with SAAS Adventures on WhatsApp">Start Your Adventure</a>
+      <button type="button" class="btn btn-primary" data-book="motorhome">Start Your Adventure</button>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
@@ -609,20 +80,19 @@ body.menu-open{ overflow:hidden; }
 
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
   <a href="#home">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#experience">Experience</a>
-  <a href="#why">Why SAAS</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#motorhomes">Motorhomes</a>
+  <a href="farmhouse.html">Farm Stays</a>
   <a href="#explore">Explore India</a>
   <a href="#how">How It Works</a>
   <a href="#contact">Contact</a>
-  <a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'm%20interested%20in%20your%20motorhome%2Fcaravan%20experience%20and%20would%20like%20to%20know%20more%20about%20availability%2C%20pricing%20and%20the%20booking%20process." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Start Your Adventure — Chat with SAAS Adventures on WhatsApp">Start Your Adventure</a>
+  <button type="button" class="btn btn-primary" data-book="motorhome">Start Your Adventure</button>
 </nav>
 
 <main id="main">
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+  <!-- ============================ HERO ============================ -->
   <section class="hero" id="home">
     <div class="hero-media">
       <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures motorhome parked on an open Indian road at golden hour"
@@ -631,37 +101,33 @@ body.menu-open{ overflow:hidden; }
     <div class="hero-content">
       <div class="container">
         <div class="hero-inner">
-          <span class="hero-eyebrow">Caravan &amp; Motorhome Travel · India</span>
-          <h1>Travel Freely.<br>Explore More.<br><em>Create Memories.</em></h1>
-          <p class="hero-sub">Your Home on the Road.</p>
-          <p class="hero-copy">Experience India differently with fully equipped caravans and motorhomes built for unforgettable journeys.</p>
+          <span class="hero-eyebrow">Farm Stay &amp; Motorhome Travel — India</span>
+          <h1>Travel Freely <span class="amp">&amp;</span> Explore More.<br><em>Create Memories.</em></h1>
+          <p class="hero-sub">Explore India. Your Way.</p>
+          <p class="hero-copy">Experience India like never before with SAAS Adventures. We create unforgettable travel experiences for explorers, families, and adventure enthusiasts. Whether you're seeking the freedom of a motorhome road trip, the tranquility of a farmhouse retreat, or a fully customized adventure tailored to your interests, we have the perfect journey waiting for you.</p>
+          <p class="hero-tagline"><strong>Drive. Stay. Discover.</strong> Experience the adventure with SAAS Adventures Pvt. Ltd.</p>
           <div class="hero-actions">
-            <a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'm%20interested%20in%20your%20motorhome%2Fcaravan%20experience%20and%20would%20like%20to%20know%20more%20about%20availability%2C%20pricing%20and%20the%20booking%20process." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Start Your Adventure — Chat with SAAS Adventures on WhatsApp">Start Your Adventure</a>
-            <a href="#experience" class="btn btn-ghost">Discover the Experience</a>
+            <button type="button" class="btn btn-primary" data-book="motorhome">Book a Motorhome</button>
+            <button type="button" class="btn btn-light" data-book="farmhouse">Book a Farm Stay</button>
+            <a href="#explore" class="btn btn-ghost">Explore India</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="scroll-cue" aria-hidden="true">
-      <span>Scroll</span>
-      <span class="line"></span>
-    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
   </section>
 
-  <!-- ============================================================
-       ABOUT
-       ============================================================ -->
+  <!-- ============================ ABOUT ============================ -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-text reveal">
           <span class="eyebrow">About SAAS Adventures</span>
-          <h2>Adventure, With the Comfort of Home.</h2>
-          <p>SAAS Adventures offers fully equipped caravans and motorhomes designed for families, friends, and adventure enthusiasts — the freedom to explore India's scenic routes, hidden corners, and wide-open outdoors, all with the comfort of a home on wheels.</p>
-          <p>Our thoughtfully equipped motorhomes bring together comfort, convenience, flexibility, and adventure, bringing premium travel within reach of more families, without compromising on comfort or memorable experiences.</p>
-          <p>Whether it's a weekend getaway, a family holiday, or a long road adventure, you have the freedom to travel at your own pace and create unforgettable memories along the way.</p>
-          <p>We believe great travel shouldn't be limited to luxury hotels or expensive holidays. With SAAS Adventures, you can experience the joy of the open road, spend quality time with the people who matter most, and discover India in a completely new way.</p>
-          <p>We're committed to making your journey simple, seamless, and hassle-free — from booking your motorhome to discovering the incredible destinations of India.</p>
+          <h2>Adventure, with the Comfort of Home</h2>
+          <p>SAAS Adventures is a travel and adventure company dedicated to helping people experience India in a unique and memorable way. We believe every journey should be more than just a trip. It should be an adventure filled with freedom, discovery, and unforgettable moments.</p>
+          <p>We believe that great travel shouldn't be limited to luxury hotels or expensive holidays. With SAAS Adventures, you can experience the joy of the open road, spend quality time with the people who matter most, and discover India in a completely new way.</p>
+          <p>At SAAS Adventures, we offer fully equipped caravans, motorhomes, and unique farmhouse stays that give you the freedom to explore India on your own terms. Discover scenic routes, hidden destinations, and the beauty of the great outdoors while enjoying the comfort of a home on wheels and peaceful retreats surrounded by nature.</p>
+          <p>Whether you're planning a family getaway, a road trip with friends, a weekend escape, or an adventure-filled holiday, we are committed to making your journey simple, seamless, and hassle-free. From booking your motorhome to discovering India's most incredible destinations, we ensure every experience is comfortable, memorable, and truly unique.</p>
           <div class="about-statement">
             <p>"Travel Freely. Explore More. Create Memories."</p>
             <p>SAAS Adventures — Your Home on the Road.</p>
@@ -669,11 +135,11 @@ body.menu-open{ overflow:hidden; }
         </div>
         <div class="about-media reveal reveal-delay-1">
           <div class="about-media-frame">
-            <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures fully equipped motorhome"
+            <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures fully equipped motorhome" loading="lazy"
                  onerror="this.parentElement.innerHTML='<div class=\'fallback-panel\'><svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>SAAS Adventures</span></div>';">
           </div>
           <div class="about-badge">
-            <strong>Home on Wheels</strong>
+            <strong>Home on Wheels &amp; Farm Stays</strong>
             <span>Comfort and freedom, built for the Indian road.</span>
           </div>
         </div>
@@ -681,44 +147,165 @@ body.menu-open{ overflow:hidden; }
     </div>
   </section>
 
-  <!-- ============================================================
-       EXPERIENCE
-       ============================================================ -->
+  <!-- ============================ SERVICES ============================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Our Services</span>
+        <h2>Drive. Stay. Discover.</h2>
+        <p>Everything you need for a memorable journey across India, in one place.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 17V8a2 2 0 0 1 2-2h11l4 4h1a2 2 0 0 1 2 2v5h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6"/><path d="M6 10h4"/></svg></div>
+          <h3>Motorhome Rentals</h3>
+          <p>Fully equipped motorhomes and caravans in two sizes, for up to 6 or up to 9 guests. Your home on the road.</p>
+          <button type="button" class="service-link" data-book="motorhome">Book Now →</button>
+        </article>
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/><path d="M2 11l10-7 10 7"/></svg></div>
+          <h3>Farmhouse Stays</h3>
+          <p>Peaceful nature retreats with privacy, open space and authentic local experiences, close to the city.</p>
+          <a href="farmhouse.html" class="service-link">View Farm Stays →</a>
+        </article>
+        <article class="service-card reveal reveal-delay-3">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div>
+          <h3>Customized Adventure Trips</h3>
+          <p>Itineraries built around you: spiritual circuits, mountain drives, wildlife safaris or coastal escapes.</p>
+          <button type="button" class="service-link" data-book="custom">Plan My Trip →</button>
+        </article>
+        <article class="service-card reveal reveal-delay-4">
+          <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+          <h3>Explore India</h3>
+          <p>150+ curated destinations across 5 themes, each with its approximate distance from Hyderabad.</p>
+          <a href="#explore" class="service-link">Explore →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERIENCE ============================ -->
   <section class="experience" id="experience">
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">The SAAS Experience</span>
-        <h2>More Than a Road Trip. It's Your Journey.</h2>
-        <p>Every motorhome journey is shaped around comfort, freedom, discovery, and the people you travel with.</p>
+        <h2>More Than a Vacation. More Than a Trip. It's Your Story.</h2>
+        <p>Every journey is built around comfort, freedom, discovery, and the people you travel with. At SAAS Adventures, we believe travel is not just about reaching a destination. It's about creating unforgettable experiences and lasting memories along the way.</p>
       </div>
-      <div class="exp-grid">
+      <p class="exp-subhead reveal">What Defines the SAAS Experience?</p>
+      <div class="exp-grid six">
         <div class="exp-card reveal reveal-delay-1">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-9l9-6 9 6v9"/><path d="M9 21v-6h6v6"/></svg></div>
-          <h3>Comfort</h3>
-          <p>Everything you need to feel at home while you're on the move.</p>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12M6 9h12M14 4c3 0 3 5 0 5H8l7 11"/></svg></div>
+          <h3>Budget-Friendly</h3>
+          <p>Travel smarter without compromising on quality.</p>
         </div>
         <div class="exp-card reveal reveal-delay-2">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-4-2 2-6z"/></svg></div>
-          <h3>Freedom</h3>
-          <p>Choose your route, your pace, and your destination.</p>
+          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"/><path d="M2 18h20"/><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></svg></div>
+          <h3>Comfort</h3>
+          <p>Enjoy the convenience and coziness of a home wherever you go.</p>
         </div>
         <div class="exp-card reveal reveal-delay-3">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-4-2 2-6z"/></svg></div>
+          <h3>Freedom</h3>
+          <p>Explore at your own pace, with no fixed schedules.</p>
+        </div>
+        <div class="exp-card reveal reveal-delay-1">
           <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19l6-11 4 7 3-5 5 9z"/></svg></div>
           <h3>Adventure</h3>
-          <p>Go beyond conventional holidays and discover India's hidden gems.</p>
+          <p>Discover hidden gems, scenic routes, and unique destinations.</p>
         </div>
-        <div class="exp-card reveal reveal-delay-4">
+        <div class="exp-card reveal reveal-delay-2">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></div>
+          <h3>Luxury</h3>
+          <p>Experience premium motorhomes, caravans, and curated stays.</p>
+        </div>
+        <div class="exp-card reveal reveal-delay-3">
           <div class="exp-icon"><svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 20.3l8.8-8.8a5 5 0 0 0 0-6.9z"/></svg></div>
           <h3>Memories</h3>
-          <p>Spend meaningful time with family and friends along the way.</p>
+          <p>Create moments that you'll cherish for a lifetime.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       WHY CHOOSE
-       ============================================================ -->
+  <!-- ============================ MOTORHOMES ============================ -->
+  <section class="motorhomes" id="motorhomes">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Meet Your Home on the Road</span>
+        <h2>Choose Your Motorhome</h2>
+        <p>Two fully equipped caravans, sized for couples, families and groups of friends.</p>
+      </div>
+
+      <div class="vehicle-grid">
+        <article class="vehicle-card reveal reveal-delay-1">
+          <div class="vehicle-media">
+            <span class="vehicle-badge">Up to 6 Pax</span>
+            <!-- TODO: replace with a photo of the 6-pax caravan -->
+            <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures caravan for up to 6 guests" loading="lazy"
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>Up to 6 Pax</span>'}));">
+          </div>
+          <div class="vehicle-body">
+            <h3>Caravan — Up to 6 Pax</h3>
+            <p>Ideal for families and small groups who want room to relax on longer drives and weekend escapes.</p>
+            <ul class="vehicle-list">
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Sleeps up to 6</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Air-conditioned cabin</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Kitchenette &amp; fridge</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Private washroom</li>
+            </ul>
+            <div class="vehicle-foot">
+              <span class="price-tag"><small>Pricing</small>Price on request</span>
+              <button type="button" class="btn btn-primary" data-book="motorhome" data-vehicle="Up to 6 Pax">Book Now</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vehicle-card reveal reveal-delay-2">
+          <div class="vehicle-media">
+            <span class="vehicle-badge">Up to 9 Pax</span>
+            <!-- TODO: replace with a photo of the 9-pax caravan -->
+            <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures caravan for up to 9 guests" loading="lazy"
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>Up to 9 Pax</span>'}));">
+          </div>
+          <div class="vehicle-body">
+            <h3>Caravan — Up to 9 Pax</h3>
+            <p>Built for bigger groups and extended families travelling together, with extra seating and sleeping space.</p>
+            <ul class="vehicle-list">
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Sleeps up to 9</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Air-conditioned cabin</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Kitchenette &amp; fridge</li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>Private washroom</li>
+            </ul>
+            <div class="vehicle-foot">
+              <span class="price-tag"><small>Pricing</small>Price on request</span>
+              <button type="button" class="btn btn-primary" data-book="motorhome" data-vehicle="Up to 9 Pax">Book Now</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="amenities">
+        <div class="section-head center reveal">
+          <span class="eyebrow">On-Board Comforts</span>
+          <h2>Everything you need, on wheels</h2>
+          <p>Thoughtfully designed interiors that turn every kilometre into a comfortable, memorable experience.</p>
+        </div>
+        <div class="amenity-grid">
+          <div class="amenity-card reveal reveal-delay-1"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 15h18"/><path d="M3 18v2M21 18v2"/><path d="M6 10V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></svg></div><h4>Convertible Beds</h4><p>Sofa-beds with soft furnishings and cushions. Sleeps up to 6 or 9, depending on the vehicle.</p></div>
+          <div class="amenity-card reveal reveal-delay-2"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1L19.1 4.9"/></svg></div><h4>Air-Conditioned</h4><p>Inverter AC keeps the cabin cool and comfortable through the warmest journeys.</p></div>
+          <div class="amenity-card reveal reveal-delay-3"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16"/><circle cx="8" cy="6" r=".6"/><circle cx="11" cy="6" r=".6"/><path d="M9 14h6"/></svg></div><h4>Kitchenette</h4><p>Sink with running water, induction cooktop, fridge and storage to cook meals anywhere.</p></div>
+          <div class="amenity-card reveal reveal-delay-4"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6v-2z"/><path d="M6 12V5a2 2 0 0 1 2-2h1"/><path d="M8 20l-1 2M16 20l1 2"/></svg></div><h4>Private Washroom</h4><p>On-board toilet with hand shower and washbasin, so no roadside stops are needed.</p></div>
+          <div class="amenity-card reveal reveal-delay-1"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>LED Mood Lighting</h4><p>Warm ambient lighting for a cosy, premium feel after dark, plus corner reading lights.</p></div>
+          <div class="amenity-card reveal reveal-delay-2"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h4>Entertainment &amp; Power Backup</h4><p>Power outlets, USB charging, TV &amp; music system, powered by a 3 kVA generator with grid connection.</p></div>
+          <div class="amenity-card reveal reveal-delay-3"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 1-7 4-7 2 0 2 3-1 5M14 12c4 0 7 1 7 4 0 2-3 2-5-1M12 14c0 4-1 7-4 7-2 0-2-3 1-5M10 12c-4 0-7-1-7-4 0-2 3-2 5 1"/></svg></div><h4>Fans &amp; Ventilation</h4><p>Roof vents and wall-mounted fans, with blinds and mosquito nets on every window.</p></div>
+          <div class="amenity-card reveal reveal-delay-4"><div class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h4>Safety First</h4><p>Emergency exits, fire extinguisher, CCTV and secure locks for complete peace of mind.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WHY ============================ -->
   <section class="why" id="why">
     <div class="container">
       <div class="section-head reveal">
@@ -726,312 +313,211 @@ body.menu-open{ overflow:hidden; }
         <h2>Built Around the Way You Actually Want to Travel.</h2>
       </div>
       <div class="why-grid">
-        <div class="why-item reveal reveal-delay-1">
-          <div class="why-stamp">01</div>
-          <div><h3>Home on Wheels</h3><p>A comfortable, familiar space that travels with you, wherever the road leads.</p></div>
-        </div>
-        <div class="why-item reveal reveal-delay-2">
-          <div class="why-stamp">02</div>
-          <div><h3>Travel at Your Own Pace</h3><p>No fixed itineraries. Stop, stay, and move on whenever it feels right.</p></div>
-        </div>
-        <div class="why-item reveal reveal-delay-3">
-          <div class="why-stamp">03</div>
-          <div><h3>Designed for Families &amp; Friends</h3><p>Space and comfort made for shared journeys and quality time together.</p></div>
-        </div>
-        <div class="why-item reveal reveal-delay-1">
-          <div class="why-stamp">04</div>
-          <div><h3>Comfort Meets Adventure</h3><p>The outdoors, without giving up the everyday comforts that matter.</p></div>
-        </div>
-        <div class="why-item reveal reveal-delay-2">
-          <div class="why-stamp">05</div>
-          <div><h3>Discover India Differently</h3><p>Trade fixed hotel stays for a changing view, every single day.</p></div>
-        </div>
-        <div class="why-item reveal reveal-delay-3">
-          <div class="why-stamp">06</div>
-          <div><h3>Hassle-Free Journey</h3><p>From planning to the open road, we keep the experience simple and seamless.</p></div>
-        </div>
+        <div class="why-item reveal reveal-delay-1"><div class="why-stamp">01</div><div><h3>Home on Wheels</h3><p>Enjoy the comfort of a familiar space that travels with you, wherever the road takes you. Our fully equipped motorhomes and caravans let you experience the freedom of travel without compromising on comfort.</p></div></div>
+        <div class="why-item reveal reveal-delay-2"><div class="why-stamp">02</div><div><h3>Travel at Your Own Pace</h3><p>No rigid schedules. No rushing from place to place. Stop, stay, and explore whenever and wherever you choose.</p></div></div>
+        <div class="why-item reveal reveal-delay-3"><div class="why-stamp">03</div><div><h3>Perfect for Families &amp; Friends</h3><p>Designed for shared experiences, our motorhomes and stays provide the space, comfort, and flexibility needed to create lasting memories together.</p></div></div>
+        <div class="why-item reveal reveal-delay-1"><div class="why-stamp">04</div><div><h3>Adventure Without Sacrificing Comfort</h3><p>Experience the thrill of the outdoors while enjoying modern amenities, cozy interiors, and all the comforts of home.</p></div></div>
+        <div class="why-item reveal reveal-delay-2"><div class="why-stamp">05</div><div><h3>Discover India Differently</h3><p>Go beyond traditional travel. Explore scenic routes, hidden gems, and offbeat destinations while waking up to a new view every day.</p></div></div>
+        <div class="why-item reveal reveal-delay-3"><div class="why-stamp">06</div><div><h3>Farm Stays &amp; Nature Retreats</h3><p>Unwind in peaceful farmhouse stays surrounded by nature. Reconnect with the outdoors while enjoying comfort, privacy, and authentic local experiences.</p></div></div>
+        <div class="why-item wide reveal"><div class="why-stamp">07</div><div><h3>Hassle-Free Travel Experience</h3><p>From booking your motorhome or farmhouse stay to planning your route, we make every step of your journey simple, seamless, and stress-free.</p></div></div>
       </div>
+      <p class="why-closing reveal">"Because the best journeys aren't just about the destination, they're about the experiences you collect along the way."</p>
     </div>
   </section>
 
-  <!-- ============================================================
-       SHOWCASE
-       ============================================================ -->
-  <section class="showcase" id="showcase">
-    <div class="container">
-      <div class="showcase-grid">
-        <div class="showcase-media reveal">
-          <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures caravan showcase"
-               onerror="this.parentElement.innerHTML='<div class=\'fallback-panel\'><svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>SAAS Adventures</span></div>';">
-        </div>
-        <div class="showcase-panel reveal reveal-delay-1">
-          <span class="eyebrow">Meet Your Home on the Road</span>
-          <h3>Fully Equipped Motorhomes</h3>
-          <p>Thoughtfully designed to combine the essentials of home with the freedom of the open road — so every journey feels as comfortable as it is exciting.</p>
-          <div class="badge-row">
-            <span class="pill"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-9l9-6 9 6v9"/></svg>Comfortable Interiors</span>
-            <span class="pill"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Travel Ready</span>
-            <span class="pill"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h-2v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2H2"/><circle cx="9" cy="7" r="4"/></svg>Family Friendly</span>
-            <span class="pill"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Flexible Journeys</span>
-            <span class="pill"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Road Trip Ready</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       EXPLORE INDIA
-       ============================================================ -->
+  <!-- ============================ EXPLORE INDIA ============================ -->
   <section class="explore" id="explore">
     <div class="container">
-      <div class="section-head center reveal">
+      <div class="section-head center reveal" style="max-width:760px">
         <span class="eyebrow">Explore India</span>
-        <h2>India Is Your Backyard.</h2>
-        <p>From winding mountain roads and peaceful forests to coastal escapes and hidden countryside, discover the freedom to experience India at your own pace.</p>
+        <h2>India Is More Than a Destination. It's a Journey of the Soul.</h2>
+        <p>From majestic mountain roads and peaceful forests to sacred temples, ancient pilgrimage routes, and serene countryside retreats, discover the many faces of India at your own pace. Experience the freedom of the open road while connecting with the country's rich culture, spirituality, and natural beauty.</p>
       </div>
-      <div class="explore-grid">
-        <div class="dest-card reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Winding mountain road through the Himalayas"
-               onerror="this.parentElement.querySelector('.fallback-panel')?.remove(); this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 19l6-11 4 7 3-5 5 9z\'/></svg>'}));">
-          <span class="dest-label">Mountains<span>Mountain Escapes</span></span>
-        </div>
-        <div class="dest-card reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Coastal road along the Indian shoreline"
-               onerror="this.parentElement.querySelector('.fallback-panel')?.remove(); this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0 4 2 6 0\'/></svg>'}));">
-          <span class="dest-label">Coastline<span>Coastal Drives</span></span>
-        </div>
-        <div class="dest-card reveal reveal-delay-3">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Quiet forest road surrounded by trees"
-               onerror="this.parentElement.querySelector('.fallback-panel')?.remove(); this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M12 2l4 6h-3v4h4l-5 8-5-8h4V8H8z\'/></svg>'}));">
-          <span class="dest-label">Forest<span>Forest Getaways</span></span>
-        </div>
-        <div class="dest-card reveal reveal-delay-4">
-          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Open countryside trail with fields"
-               onerror="this.parentElement.querySelector('.fallback-panel')?.remove(); this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 20h18M6 20V10l6-6 6 6v10\'/></svg>'}));">
-          <span class="dest-label">Countryside<span>Countryside Trails</span></span>
-        </div>
+      <div class="explore-grid five">
+        <button type="button" class="dest-card reveal reveal-delay-1" data-open-cat="devotional" aria-label="Devotional and spiritual journeys: view destinations">
+          <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.remove();">
+          <span class="dest-label">Devotional<span>Spiritual Journeys</span><span class="dest-tag">Temple Trails • Pilgrimage Tours • Spiritual Retreats</span><span class="dest-count">View <b data-cat-count="devotional">36</b>&nbsp;destinations →</span></span>
+        </button>
+        <button type="button" class="dest-card reveal reveal-delay-2" data-open-cat="mountains" aria-label="Mountains: view destinations">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.remove();">
+          <span class="dest-label">Mountains<span>Mountain Escapes</span><span class="dest-tag">Breathe Higher. Explore Farther.</span><span class="dest-count">View <b data-cat-count="mountains">28</b>&nbsp;destinations →</span></span>
+        </button>
+        <button type="button" class="dest-card reveal reveal-delay-3" data-open-cat="coastline" aria-label="Coastline: view destinations">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.remove();">
+          <span class="dest-label">Coastline<span>Coastal Drives</span><span class="dest-tag">Sun, Sand &amp; Scenic Coastal Drives</span><span class="dest-count">View <b data-cat-count="coastline">33</b>&nbsp;destinations →</span></span>
+        </button>
+        <button type="button" class="dest-card reveal reveal-delay-1" data-open-cat="wildlife" aria-label="Forest and wildlife: view destinations">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.remove();">
+          <span class="dest-label">Forest &amp; Wildlife<span>Safaris &amp; Sanctuaries</span><span class="dest-tag">Into the Wild, Close to Nature</span><span class="dest-count">View <b data-cat-count="wildlife">28</b>&nbsp;destinations →</span></span>
+        </button>
+        <button type="button" class="dest-card reveal reveal-delay-2" data-open-cat="countryside" aria-label="Countryside, lakes and caves: view destinations">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy" onerror="this.remove();">
+          <span class="dest-label">Countryside &amp; Caves<span>Lakes, Dams &amp; Heritage Caves</span><span class="dest-tag">Where Serenity Meets the Open Road</span><span class="dest-count">View <b data-cat-count="countryside">38</b>&nbsp;destinations →</span></span>
+        </button>
+      </div>
+      <div class="explore-foot reveal">
+        <button type="button" class="btn btn-outline" data-open-states>Browse by State →</button>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       HOW IT WORKS — premium step cards
-       ============================================================ -->
+  <!-- ============================ HOW IT WORKS ============================ -->
   <section class="how" id="how">
     <div class="container">
       <div class="section-head center reveal">
         <span class="eyebrow">How It Works</span>
-        <h2>Your Journey, In Four Stops.</h2>
+        <h2>Your Journey, In Six Easy Steps.</h2>
+        <p>At SAAS Adventures, we've made it easy for you to hit the road and create unforgettable memories.</p>
       </div>
-      <div class="how-grid">
-        <article class="how-card reveal reveal-delay-1">
-          <span class="how-card-number">01</span>
-          <div class="how-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2z"/></svg>
-          </div>
-          <h3>Choose Your Journey</h3>
-          <p>Decide where you want to go and how you want to experience it.</p>
-        </article>
-        <article class="how-card reveal reveal-delay-2">
-          <span class="how-card-number">02</span>
-          <div class="how-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M8 13.5h2"/><path d="M14 13.5h2"/><path d="M8 17h2"/></svg>
-          </div>
-          <h3>Book Your Motorhome</h3>
-          <p>Connect with SAAS Adventures and plan your motorhome experience.</p>
-        </article>
-        <article class="how-card reveal reveal-delay-3">
-          <span class="how-card-number">03</span>
-          <div class="how-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v2"/><path d="M12 17v2"/><path d="M9.5 9.5l-1-1"/><path d="M15.5 14.5l1 1"/><path d="M9.5 14.5l-1 1"/><path d="M15.5 9.5l1-1"/></svg>
-          </div>
-          <h3>Hit the Road</h3>
-          <p>Pick up your motorhome and begin your adventure.</p>
-        </article>
-        <article class="how-card reveal reveal-delay-4">
-          <span class="how-card-number">04</span>
-          <div class="how-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.3-8.8C1.3 8 2.8 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.2 0 4.7 3 3.3 6.2C19 15.6 12 20 12 20z"/></svg>
-          </div>
-          <h3>Create Memories</h3>
-          <p>Explore, unwind, and enjoy the journey at your own pace.</p>
-        </article>
+      <div class="how-grid six">
+        <article class="how-card reveal reveal-delay-1"><span class="how-card-number">01</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5l2 2 4-4"/></svg></div><h3>Choose Your Experience</h3><p>Select from our Motorhome Rentals, Farmhouse Stays, or Customized Adventure Trips based on your travel style and destination.</p></article>
+        <article class="how-card reveal reveal-delay-2"><span class="how-card-number">02</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2z"/></svg></div><h3>Plan Your Journey</h3><p>Pick your dates, destinations, and itinerary. Need inspiration? Explore our curated routes featuring spiritual destinations, mountains, forests, beaches, caves, and countryside escapes.</p></article>
+        <article class="how-card reveal reveal-delay-3"><span class="how-card-number">03</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M8.5 14.5l2 2 4.5-4.5"/></svg></div><h3>Book with Ease</h3><p>Complete your booking through a simple and hassle-free process. Our team will help you choose the perfect option for your journey.</p></article>
+        <article class="how-card reveal reveal-delay-1"><span class="how-card-number">04</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2L20 3"/><path d="M17 6l2 2"/><path d="M15 8l2 2"/></svg></div><h3>Pick Up &amp; Get Ready</h3><p>Receive a fully equipped motorhome or enjoy a carefully selected farmhouse stay, complete with the essentials needed for a comfortable experience.</p></article>
+        <article class="how-card reveal reveal-delay-2"><span class="how-card-number">05</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21L9 3"/><path d="M20 21L15 3"/><path d="M12 5v2M12 11v2M12 17v2"/></svg></div><h3>Travel, Explore &amp; Enjoy</h3><p>Hit the road, discover hidden gems, explore India's scenic destinations, and travel at your own pace without rigid schedules.</p></article>
+        <article class="how-card reveal reveal-delay-3"><span class="how-card-number">06</span><div class="how-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.3-8.8C1.3 8 2.8 5 6 5c2 0 3.3 1 4 2 .7-1 2-2 4-2 3.2 0 4.7 3 3.3 6.2C19 15.6 12 20 12 20z"/></svg></div><h3>Create Memories</h3><p>Spend quality time with family and friends, experience new places, and return home with stories and memories that last a lifetime.</p></article>
       </div>
+      <p class="how-closing reveal">Simple. Flexible. Memorable.</p>
     </div>
   </section>
 
-  <!-- ============================================================
-       EMOTIONAL CTA
-       ============================================================ -->
+  <!-- ============================ CTA ============================ -->
   <section class="cta-section" id="road-calling">
     <div class="cta-media">
-      <img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1600&q=80" alt=""
-           onerror="this.remove();">
+      <img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1600&q=80" alt="" loading="lazy" onerror="this.remove();">
     </div>
     <div class="container">
       <div class="cta-content reveal">
-        <h2>The Road Is Calling.</h2>
-        <p>Leave the ordinary behind. Bring your people, choose your direction, and discover the joy of having your own home on the road.</p>
+        <h2>Leave the Ordinary Behind</h2>
+        <p>Gather your family and friends, choose your destination, and set off on an adventure unlike any other. With SAAS Adventures, every journey becomes an opportunity to explore, connect, and create unforgettable memories.</p>
+        <p>Enjoy the freedom of the open road, the comfort of a home on wheels, and the flexibility to travel at your own pace. Whether you're heading to the mountains, forests, beaches, spiritual destinations, or countryside retreats, the journey is yours to design.</p>
+        <p class="cta-line">Pack your bags. Pick your route. The road is waiting.</p>
         <div class="cta-actions">
-          <a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20plan%20a%20motorhome%20adventure.%20Please%20share%20the%20details%20and%20availability." class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Start Your Adventure — Chat with SAAS Adventures on WhatsApp">Start Your Adventure</a>
+          <button type="button" class="btn btn-primary" data-book="motorhome">Start Your Adventure</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       CONTACT
-       ============================================================ -->
+  <!-- ============================ CONTACT ============================ -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <span class="eyebrow">Get In Touch</span>
-          <h2>Plan Your Next Adventure.</h2>
-          <p>Have a destination in mind? Thinking about a family road trip? Or simply curious about what a motorhome journey could look like?</p>
-          <p>Tell us a little about your plans and we'll help you take it from there.</p>
+          <span class="eyebrow">Contact</span>
+          <h2>Let's Start Your Next Adventure</h2>
+          <p>Whether you're planning a road trip, a family getaway, a spiritual journey, a farmhouse retreat, or a customized adventure, we're here to help make it happen.</p>
+          <p>Have questions about our motorhomes, caravan rentals, farmhouse stays, destinations, or travel packages? Our team is ready to assist you every step of the way.</p>
+          <div class="contact-cards">
+            <a class="info-card" href="tel:+919347760620"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Phone</small><strong>+91 93477 60620</strong></span></a>
+            <a class="info-card" href="https://wa.me/919347760620" target="_blank" rel="noopener noreferrer"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21l1.7-4.6A8.5 8.5 0 1 1 8 19.6z"/></svg></span><span><small>WhatsApp</small><strong>+91 93477 60620</strong></span></a>
+            <a class="info-card" href="https://wa.me/917799882182" target="_blank" rel="noopener noreferrer"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg></span><span><small>Bookings (WhatsApp)</small><strong>+91 77998 82182</strong></span></a>
+            <a class="info-card" href="mailto:info@saasadventures.com"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small><strong>info@saasadventures.com</strong></span></a>
+            <div class="info-card full"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Location</small><strong>SAAS Adventures Pvt. Ltd., Sy. No. 203/AA/1/1, Aloor Village, Chevella, Ranga Reddy, Telangana – 501503, India</strong><a class="sub-link" href="https://www.google.com/maps/search/?api=1&query=Aloor+Village+Chevella+Ranga+Reddy+Telangana+501503" target="_blank" rel="noopener noreferrer">Get Directions →</a></span></div>
+            <div class="info-card full"><span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Business Hours</small><strong>Monday – Sunday: 9:00 AM – 9:00 PM</strong></span></div>
+          </div>
         </div>
 
-        <div class="whatsapp-panel reveal reveal-delay-1">
+        <div class="whatsapp-panel reveal reveal-delay-1" style="align-self:start">
           <div class="whatsapp-card">
             <strong>SAAS Adventures</strong>
             <span>Your Home on the Road.</span>
             <span class="whatsapp-number">+91 77998 82182</span>
           </div>
-          <a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20experience%20and%20discuss%20planning%20a%20journey." class="btn btn-primary whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp SAAS Adventures — Chat with SAAS Adventures on WhatsApp">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
-            WhatsApp SAAS Adventures →
-          </a>
-          <p class="contact-note">Chat with us directly to enquire about your journey.</p>
+          <button type="button" class="btn btn-primary whatsapp-btn" data-book="motorhome">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
+            Plan &amp; Book on WhatsApp →
+          </button>
+          <a class="whatsapp-secondary" href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer">or just chat with us on WhatsApp</a>
+          <p class="contact-note">Fill in a short form and we'll prepare your WhatsApp message with all your trip details.</p>
         </div>
+      </div>
+
+      <div class="ready-band reveal">
+        <div>
+          <h3>🚐 Ready to Hit the Road?</h3>
+          <p>Leave the planning to us and focus on creating unforgettable memories with your family and friends.</p>
+          <p class="motto">Travel Freely. Explore More. Create Memories.</p>
+        </div>
+        <button type="button" class="btn btn-light" data-book="motorhome">The Road Is Calling. Let's Talk</button>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- ============================ FOOTER ============================ -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-top">
+    <div class="footer-top four">
       <div class="footer-brand">
         <a href="#home" class="brand" aria-label="SAAS Adventures home">
-          <img src="https://cryptuasolutions.com/saas/s1.jpeg" alt="SAAS Adventures logo"
+          <img src="https://cryptuasolutions.com/saas/s1.jpeg" alt="SAAS Adventures logo" loading="lazy"
                onerror="this.style.display='none'; document.getElementById('footerBrandFallback').style.display='flex';">
           <span id="footerBrandFallback" class="brand-fallback" style="display:none;">SA</span>
           <span class="brand-word" style="color:#fff;">SAAS Adventures</span>
         </a>
         <p>Travel Freely. Explore More. Create Memories.</p>
-        <p class="footer-tagline">SAAS Adventures — Your Home on the Road.</p>
+        <div class="footer-social">
+          <a data-social="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a data-social="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></a>
+          <a data-social="youtube" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+          <a data-social="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg></a>
+        </div>
       </div>
       <div class="footer-col">
-        <h4>Navigate</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#explore">Explore</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#motorhomes">Motorhome Rentals</a></li>
+          <li><a href="farmhouse.html">Farmhouse Stays</a></li>
+          <li><button type="button" class="linklike" data-book="custom">Customized Adventure Trips</button></li>
+          <li><a href="#explore">Explore India</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>SAAS Adventures</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><span style="color:rgba(250,246,236,.75);">India</span></li>
-          <li><a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20experience%20and%20discuss%20planning%20a%20journey." target="_blank" rel="noopener noreferrer">+91 77998 82182</a></li>
-          <li><a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20experience%20and%20discuss%20planning%20a%20journey." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></li>
+          <li><button type="button" class="linklike" data-open-cat="devotional">Devotional</button></li>
+          <li><button type="button" class="linklike" data-open-cat="mountains">Mountains</button></li>
+          <li><button type="button" class="linklike" data-open-cat="coastline">Coastline</button></li>
+          <li><button type="button" class="linklike" data-open-cat="wildlife">Forest &amp; Wildlife</button></li>
+          <li><button type="button" class="linklike" data-open-cat="countryside">Countryside &amp; Caves</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          Sy. No. 203/AA/1/1, Aloor Village,<br>Chevella, Ranga Reddy,<br>Telangana – 501503, India
+        </address>
+        <ul style="margin-top:1rem">
+          <li><a href="tel:+919347760620">+91 93477 60620</a></li>
+          <li><a href="mailto:info@saasadventures.com">info@saasadventures.com</a></li>
+          <li><span style="color:rgba(250,246,236,.75)">Mon – Sun: 9 AM – 9 PM</span></li>
+          <li><a href="https://www.saasadventures.in">www.saasadventures.in</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SAAS Adventures. All rights reserved.</span>
+      <span>© 2026 SAAS Adventures Pvt. Ltd. All rights reserved.</span>
+      <span class="footer-legal"><span>CIN: U55101TS2026PTC220708</span><span>GSTIN: 36ABUCS6246A1Z3</span></span>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20experiences." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with SAAS Adventures on WhatsApp">
+<!-- Social bar (bottom-left) -->
+<div class="social-bar" aria-label="Follow SAAS Adventures">
+  <div class="social-list" id="socialList">
+    <a data-social="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a data-social="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></a>
+    <a data-social="youtube" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+  </div>
+  <button type="button" class="social-toggle" aria-expanded="false" aria-controls="socialList" aria-label="Show social links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button>
+</div>
+
+<!-- Floating WhatsApp (bottom-right) -->
+<a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20and%20farm%20stay%20experiences." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with SAAS Adventures on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
 </a>
-
-<script>
-(function(){
-  "use strict";
-
-  /* ---------- Sticky header state ---------- */
-  var header = document.getElementById('siteHeader');
-  function onScroll(){
-    if(window.scrollY > 40){ header.classList.add('scrolled'); }
-    else{ header.classList.remove('scrolled'); }
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  /* ---------- Mobile navigation ---------- */
-  var hamburger = document.getElementById('hamburgerBtn');
-  var mobileNav = document.getElementById('mobileNav');
-
-  function closeMenu(){
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-label', 'Open menu');
-    mobileNav.classList.remove('open');
-    document.body.classList.remove('menu-open');
-  }
-  function openMenu(){
-    hamburger.setAttribute('aria-expanded', 'true');
-    hamburger.setAttribute('aria-label', 'Close menu');
-    mobileNav.classList.add('open');
-    document.body.classList.add('menu-open');
-  }
-  hamburger.addEventListener('click', function(){
-    var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-    isOpen ? closeMenu() : openMenu();
-  });
-  mobileNav.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', closeMenu);
-  });
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeMenu();
-  });
-
-  /* ---------- Active nav link on scroll ---------- */
-  var sections = document.querySelectorAll('main section[id]');
-  var navLinks = document.querySelectorAll('.main-nav a');
-  function setActive(){
-    var scrollPos = window.scrollY + 140;
-    var currentId = null;
-    sections.forEach(function(sec){
-      if(sec.offsetTop <= scrollPos){ currentId = sec.id; }
-    });
-    navLinks.forEach(function(link){
-      var match = link.getAttribute('href') === '#' + currentId;
-      link.classList.toggle('active', !!match);
-    });
-  }
-  setActive();
-  window.addEventListener('scroll', setActive, { passive: true });
-
-  /* ---------- Reveal on scroll ---------- */
-  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealEls = document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window && !prefersReduced){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
-  }
-
-})();
-</script>
 
 </body>
 </html>
