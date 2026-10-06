@@ -175,7 +175,7 @@
         ["Eturnagaram Wildlife Sanctuary", "Telangana", 250],
         ["Kawal Tiger Reserve", "Telangana", 260],
         ["Kinnerasani Wildlife Sanctuary", "Telangana", 320],
-        ["Nagarjunasagar–Srisailam Tiger Reserve", "Andhra Pradesh / Telangana", 215],
+        ["Nagarjunasagar–Srisailam Tiger Reserve", "Andhra Pradesh", 215],
         ["Rollapadu Wildlife Sanctuary", "Andhra Pradesh", 230],
         ["Sri Lankamalleswara Wildlife Sanctuary", "Andhra Pradesh", 370],
         ["Papikondalu National Park", "Andhra Pradesh", 420],
@@ -212,7 +212,7 @@
           data: [
             ["Singur Dam & Reservoir", "Telangana", 90],
             ["Pocharam Reservoir", "Telangana", 110],
-            ["Nagarjuna Sagar Dam", "Telangana / Andhra Pradesh", 165],
+            ["Nagarjuna Sagar Dam", "Telangana", 165],
             ["Nizam Sagar Dam", "Telangana", 170],
             ["Lower Manair Dam", "Telangana", 170],
             ["Pakhal Lake", "Telangana", 210],
@@ -517,7 +517,7 @@
     function rowHTML(d, showCat) {
       var c = catById(d.category);
       return '<div class="dest-row"><div class="dest-row-name">' + esc(d.name) +
-        (showCat ? '<span class="cat-tag">' + esc(c.short) + '</span>' : '<small>' + esc(d.state) + '</small>') +
+        (showCat ? ' <span class="cat-tag"> | ' + esc(c.short) + '</span>' : '<small>' + esc(d.state) + '</small>') +
         '</div><span class="km-badge">≈ ' + d.kmLabel + ' km <span>from Hyderabad</span></span>' +
         '<button type="button" class="plan-btn" data-book="custom" data-destination="' + esc(d.name + " (" + c.short + ")") + '">Plan this trip</button></div>';
     }
