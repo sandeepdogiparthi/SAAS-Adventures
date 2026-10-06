@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm Stays &amp; Nature Retreats | SAAS Adventures</title>
+<meta name="description" content="Book peaceful farmhouse stays near Hyderabad with SAAS Adventures. Privacy, open space and authentic local experiences, plus motorhome + farm stay weekend combos.">
+<link rel="canonical" href="https://www.saasadventures.in/farmhouse.html">
+<meta property="og:title" content="Farm Stays &amp; Nature Retreats | SAAS Adventures">
+<meta property="og:description" content="Peaceful farmhouse stays surrounded by nature. Book on WhatsApp in a minute.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="SAAS Adventures home">
+      <img src="https://cryptuasolutions.com/saas/s1.jpeg" alt="SAAS Adventures logo"
+           onerror="this.style.display='none'; document.getElementById('brandFallback').style.display='flex';">
+      <span id="brandFallback" class="brand-fallback" style="display:none;">SA</span>
+      <span class="brand-word">SAAS Adventures</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#motorhomes">Motorhomes</a>
+      <a href="farmhouse.html" class="active" aria-current="page">Farm Stays</a>
+      <a href="index.html#explore">Explore India</a>
+      <a href="index.html#how">How It Works</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <button type="button" class="btn btn-primary" data-book="farmhouse">Book a Farm Stay</button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#motorhomes">Motorhomes</a>
+  <a href="farmhouse.html" class="active" aria-current="page">Farm Stays</a>
+  <a href="index.html#explore">Explore India</a>
+  <a href="index.html#how">How It Works</a>
+  <a href="index.html#contact">Contact</a>
+  <button type="button" class="btn btn-primary" data-book="farmhouse">Book a Farm Stay</button>
+</nav>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero page-hero" id="top">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=80" alt="Open farmland at sunset"
+           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 21h18M5 21V10l7-5 7 5v11\'/></svg><span>Farm Stays</span>'}));">
+    </div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="hero-eyebrow">Book for Stay — Farmhouse</span>
+          <h1>Farm Stays &amp; <em>Nature Retreats</em></h1>
+          <p class="hero-copy">Unwind in peaceful farmhouse stays surrounded by nature. Reconnect with the outdoors while enjoying comfort, privacy, and authentic local experiences.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" data-book="farmhouse">Book Stay</button>
+            <a href="#stays" class="btn btn-ghost">View Farmhouses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ LISTINGS ============================ -->
+  <section class="farm-section" id="stays">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Our Farmhouses</span>
+        <h2>Slow Down. Breathe Easy.</h2>
+        <p>Handpicked stays just outside the city, ideal for weekends, family get-togethers and quiet escapes.</p>
+      </div>
+      <div id="farmList"><!-- rendered from FARMHOUSES below --></div>
+    </div>
+  </section>
+
+  <!-- ============================ COMBO ============================ -->
+  <section class="combo">
+    <div class="container combo-inner">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--gold)">Combo Getaway</span>
+        <h2>Make it a Motorhome + Farm Stay Weekend</h2>
+        <p>Drive out in a fully equipped motorhome, explore the countryside at your own pace, then settle in for a night or two at the farmhouse. We'll plan the route and the stay together.</p>
+      </div>
+      <button type="button" class="btn btn-primary reveal reveal-delay-1" data-book="custom" data-destination="Motorhome + Farm Stay Weekend">Plan My Combo Trip</button>
+    </div>
+  </section>
+
+  <!-- ============================ FAQ ============================ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Good to Know</span>
+        <h2>Farm Stay FAQs</h2>
+      </div>
+      <div class="faq-list reveal">
+        <!-- TODO: replace the answers below with your actual policies -->
+        <details><summary>What is the cancellation policy?</summary><p>[Cancellation policy to be confirmed.] Please contact us on WhatsApp for current cancellation and refund terms.</p></details>
+        <details><summary>Are pets allowed?</summary><p>[Pet policy to be confirmed.] Let us know in your booking request if you're travelling with a pet and we'll confirm.</p></details>
+        <details><summary>Is food provided?</summary><p>[Meal options to be confirmed.] Mention any meal preferences in the "Special requests" box when you book.</p></details>
+        <details><summary>Can we host a small event or celebration?</summary><p>[Event policy to be confirmed.] Share the occasion and group size in your request and our team will get back to you.</p></details>
+        <details><summary>How do I book?</summary><p>Tap "Book Stay", fill in your dates and number of guests, and we'll open WhatsApp with your request ready to send to +91 77998 82182. Our team confirms availability and pricing directly with you.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <button type="button" class="sheet-close" data-lb-close aria-label="Close photo">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img id="lbImg" alt="">
+  <button type="button" class="lb-nav lb-prev" aria-label="Previous photo">‹</button>
+  <button type="button" class="lb-nav lb-next" aria-label="Next photo">›</button>
+</dialog>
+
+<script>
+/* ==========================================================================
+   FARMHOUSES — add more objects to this array to list more stays.
+   TODO: replace placeholder values with details from the Google listing:
+   https://share.google/cmEAnsebkZjvysN2a
+   ========================================================================== */
+var FARMHOUSES = [
+  {
+    name: "SAAS Farm Stay, Chevella",             // TODO: actual farmhouse name
+    location: "Aloor Village, Chevella, Ranga Reddy, Telangana",
+    distance: "Near Hyderabad",                   // TODO: add exact distance, e.g. "≈ XX km from Hyderabad"
+    description: "A peaceful farmhouse retreat surrounded by open fields and greenery: the perfect setting for family weekends, get-togethers with friends, or a quiet break from the city.",
+    guests: "TBC", rooms: "TBC", price: "On request",   // TODO
+    amenities: ["Open lawn", "Parking", "Kitchen access", "Outdoor seating", "Bonfire area"], // TODO: confirm
+    checkIn: "TBC", checkOut: "TBC",               // TODO
+    rules: "House rules to be confirmed.",         // TODO
+    mapsUrl: "https://share.google/cmEAnsebkZjvysN2a",
+    photos: [                                      // TODO: replace with real farmhouse photos
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+    ],
+    placeholder: true
+  }
+];
+
+(function () {
+  function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+  var pin = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
+  var fb = "this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<span>Photo coming soon</span>'}))";
+  document.getElementById("farmList").innerHTML = FARMHOUSES.map(function (f, i) {
+    var shown = f.photos.slice(0, 3);
+    var gallery = shown.map(function (p, j) {
+      var more = (j === 2 && f.photos.length > 3) ? '<span class="more">+' + (f.photos.length - 3) + ' photos</span>' : '';
+      return '<button type="button" data-lb="' + i + '" data-idx="' + j + '" aria-label="View photo ' + (j + 1) + ' of ' + esc(f.name) + '"><img src="' + esc(p) + '" alt="' + esc(f.name) + ' photo ' + (j + 1) + '" loading="lazy" onerror="' + fb + '">' + more + '</button>';
+    }).join("");
+    return '<article class="farm-card reveal">' +
+      '<div class="gallery">' + gallery + '</div>' +
+      '<div class="farm-info">' +
+        '<h2>' + esc(f.name) + '</h2>' +
+        '<span class="farm-loc">' + pin + esc(f.location) + ' · ' + esc(f.distance) + '</span>' +
+        '<p style="color:rgba(38,34,28,.75)">' + esc(f.description) + '</p>' +
+        '<div class="farm-stats"><div><strong>' + esc(f.guests) + '</strong><span>Guests</span></div><div><strong>' + esc(f.rooms) + '</strong><span>Rooms</span></div><div><strong style="font-size:1rem">' + esc(f.price) + '</strong><span>Price</span></div></div>' +
+        '<div class="farm-amen">' + f.amenities.map(function (a) { return '<span class="pill">' + esc(a) + '</span>'; }).join("") + '</div>' +
+        '<div class="farm-meta"><span><b>Check-in:</b> ' + esc(f.checkIn) + ' · <b>Check-out:</b> ' + esc(f.checkOut) + '</span><span><b>House rules:</b> ' + esc(f.rules) + '</span></div>' +
+        (f.placeholder ? '<p class="placeholder-note">Preview content. Final farmhouse name, photos, capacity, amenities and pricing to be added from the Google listing.</p>' : '') +
+        '<div class="farm-actions">' +
+          '<button type="button" class="btn btn-primary" data-book="farmhouse" data-farmhouse="' + esc(f.name) + '">Book Stay</button>' +
+          '<a class="btn btn-outline" href="' + esc(f.mapsUrl) + '" target="_blank" rel="noopener noreferrer">Get Directions</a>' +
+        '</div>' +
+      '</div></article>';
+  }).join("");
+
+  /* Lightbox */
+  var lb = document.getElementById("lightbox"), img = document.getElementById("lbImg"), cur = { f: 0, i: 0 };
+  function show() { var f = FARMHOUSES[cur.f]; img.src = f.photos[cur.i]; img.alt = f.name + " photo " + (cur.i + 1) + " of " + f.photos.length; }
+  function step(d) { var n = FARMHOUSES[cur.f].photos.length; cur.i = (cur.i + d + n) % n; show(); }
+  var opener = null;
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-lb]"); if (!b) return;
+    opener = b; cur.f = +b.getAttribute("data-lb"); cur.i = +b.getAttribute("data-idx"); show(); lb.showModal();
+  });
+  lb.querySelector("[data-lb-close]").addEventListener("click", function () { lb.close(); });
+  lb.querySelector(".lb-prev").addEventListener("click", function () { step(-1); });
+  lb.querySelector(".lb-next").addEventListener("click", function () { step(1); });
+  lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  lb.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+  lb.addEventListener("close", function () { if (opener) opener.focus(); });
+})();
+</script>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top four">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="SAAS Adventures home">
+          <img src="https://cryptuasolutions.com/saas/s1.jpeg" alt="SAAS Adventures logo" loading="lazy"
+               onerror="this.style.display='none'; document.getElementById('footerBrandFallback').style.display='flex';">
+          <span id="footerBrandFallback" class="brand-fallback" style="display:none;">SA</span>
+          <span class="brand-word" style="color:#fff;">SAAS Adventures</span>
+        </a>
+        <p>Travel Freely. Explore More. Create Memories.</p>
+        <div class="footer-social">
+          <a data-social="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a data-social="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></a>
+          <a data-social="youtube" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+          <a data-social="whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="SAAS Adventures on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#motorhomes">Motorhome Rentals</a></li>
+          <li><a href="farmhouse.html">Farmhouse Stays</a></li>
+          <li><button type="button" class="linklike" data-book="custom">Customized Adventure Trips</button></li>
+          <li><a href="index.html#explore">Explore India</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><button type="button" class="linklike" data-open-cat="devotional">Devotional</button></li>
+          <li><button type="button" class="linklike" data-open-cat="mountains">Mountains</button></li>
+          <li><button type="button" class="linklike" data-open-cat="coastline">Coastline</button></li>
+          <li><button type="button" class="linklike" data-open-cat="wildlife">Forest &amp; Wildlife</button></li>
+          <li><button type="button" class="linklike" data-open-cat="countryside">Countryside &amp; Caves</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          Sy. No. 203/AA/1/1, Aloor Village,<br>Chevella, Ranga Reddy,<br>Telangana – 501503, India
+        </address>
+        <ul style="margin-top:1rem">
+          <li><a href="tel:+919347760620">+91 93477 60620</a></li>
+          <li><a href="mailto:info@saasadventures.com">info@saasadventures.com</a></li>
+          <li><span style="color:rgba(250,246,236,.75)">Mon – Sun: 9 AM – 9 PM</span></li>
+          <li><a href="https://www.saasadventures.in">www.saasadventures.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SAAS Adventures Pvt. Ltd. All rights reserved.</span>
+      <span class="footer-legal"><span>CIN: U55101TS2026PTC220708</span><span>GSTIN: 36ABUCS6246A1Z3</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Social bar (bottom-left) -->
+<div class="social-bar" aria-label="Follow SAAS Adventures">
+  <div class="social-list" id="socialList">
+    <a data-social="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a data-social="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></a>
+    <a data-social="youtube" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+  </div>
+  <button type="button" class="social-toggle" aria-expanded="false" aria-controls="socialList" aria-label="Show social links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg></button>
+</div>
+
+<!-- Floating WhatsApp (bottom-right) -->
+<a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20and%20farm%20stay%20experiences." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with SAAS Adventures on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
+</a>
+
+</body>
+</html>
