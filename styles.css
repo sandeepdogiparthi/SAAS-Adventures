@@ -965,3 +965,110 @@ dialog.lightbox .sheet-close{ top:-.8rem; right:-.8rem; }
   .contact-cards .info-card.wide{ grid-column: auto; }
   .contact-cards strong.nowrap{ white-space: normal; overflow-wrap: anywhere; }
 }
+
+/* ============================================================
+   v2.2 — HERO SLIDER
+   Decorative background. Slides stack; only .is-active is visible.
+   ============================================================ */
+.hero-slider{ position:absolute; inset:0; }
+.hero-slide{
+  position:absolute; inset:0; opacity:0;
+  transition: opacity 1.2s var(--ease);
+  will-change: opacity;
+}
+.hero-slide.is-active{ opacity:1; }
+.hero-slide img{ width:100%; height:100%; object-fit:cover; object-position: center 55%; transform: scale(1.02); }
+.hero-slide.is-active img{ animation: heroDrift 7.5s var(--ease) forwards; }
+.hero-slide .fallback-panel{ width:100%; height:100%; }
+@keyframes heroDrift{ from{ transform: scale(1.02); } to{ transform: scale(1.1); } }
+@media (prefers-reduced-motion: reduce){
+  .hero-slide{ transition:none; }
+  .hero-slide img, .hero-slide.is-active img{ animation:none; transform:none; }
+}
+
+/* ============================================================
+   v2.2 — VEHICLE PHOTO GALLERY (Exterior / Interior)
+   ============================================================ */
+.cv-gallery{ display:flex; flex-direction:column; }
+.cv-stage{ overflow:hidden; }
+
+.cv-strip{
+  display:flex; height:100%;
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width:none;
+}
+.cv-strip::-webkit-scrollbar{ display:none; }
+.cv-strip:focus-visible{ outline: 2px solid var(--gold); outline-offset: -4px; }
+
+.cv-shot{
+  flex: 0 0 100%; width:100%; height:100%;
+  padding:0; border:none; background: var(--forest);
+  scroll-snap-align: start; scroll-snap-stop: always;
+  cursor: zoom-in;
+}
+.cv-shot img{ width:100%; height:100%; object-fit:cover; display:block; }
+.cv-shot .fallback-panel{ width:100%; height:100%; }
+.cv-shot:focus-visible{ outline: 2px solid var(--gold); outline-offset: -4px; }
+
+.cv-arrow{
+  position:absolute; top:50%; transform: translateY(-50%); z-index:3;
+  width:38px; height:38px; border-radius:50%; border:none;
+  background: rgba(250,246,236,.92); color: var(--forest);
+  font-size:1.3rem; font-weight:700; line-height:1; cursor:pointer;
+  box-shadow: var(--shadow-sm);
+  transition: opacity var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.cv-arrow:hover{ background:#fff; }
+.cv-arrow:disabled{ opacity:.3; cursor:default; }
+.cv-prev{ left:.7rem; } .cv-next{ right:.7rem; }
+@media (hover: none){ .cv-arrow{ display:none; } }
+
+.cv-counter{
+  position:absolute; right:.9rem; bottom:.9rem; z-index:3;
+  background: rgba(18,38,27,.72); color: var(--ivory);
+  padding:.3rem .7rem; border-radius:999px;
+  font-size:.78rem; font-weight:700; letter-spacing:.04em;
+}
+
+.cv-tabs{
+  display:flex; gap:.4rem; padding: 0 clamp(1.1rem, 3vw, 2rem);
+  border-bottom: 1.5px solid var(--sand);
+  background:#fff;
+}
+.cv-tab{
+  flex:1; background:none; border:none; cursor:pointer;
+  padding:.85rem .6rem; font-family: var(--font-body);
+  font-weight:700; font-size:.92rem; color: rgba(38,34,28,.55);
+  border-bottom: 3px solid transparent; margin-bottom:-1.5px;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.cv-tab:hover{ color: var(--forest); }
+.cv-tab[aria-selected="true"]{ color: var(--forest); border-bottom-color: var(--terracotta); }
+.cv-tab:focus-visible{ outline: 2px solid var(--gold); outline-offset: -2px; }
+
+/* ============================================================
+   v2.2 — GROUPED FARM STAY AMENITIES
+   ============================================================ */
+.amen-groups{ display:grid; gap:1rem; }
+.amen-group h4{
+  font-family: var(--font-body); font-size:.76rem; font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase;
+  color: rgba(38,34,28,.55); margin-bottom:.55rem;
+}
+.amen-more{ border-top: 1px solid var(--sand); padding-top:.9rem; }
+.amen-more > summary{
+  list-style:none; cursor:pointer;
+  display:flex; align-items:center; gap:.5rem;
+  font-weight:700; font-size:.9rem; color: var(--terracotta);
+}
+.amen-more > summary::-webkit-details-marker{ display:none; }
+.amen-more > summary span{ font-weight:600; color: rgba(38,34,28,.5); }
+.amen-more > summary::after{ content:"+"; margin-left:auto; font-size:1.2rem; line-height:1; }
+.amen-more[open] > summary::after{ content:"–"; }
+.amen-more[open] > summary{ margin-bottom:1rem; }
+.amen-more .amen-group + .amen-group{ margin-top:1rem; }
+
+/* Contact grid: with four cards, the wide card takes a full row of its own. */
+.contact-cards .info-card.wide{ grid-column: 1 / -1; }
