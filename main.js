@@ -9,16 +9,55 @@
      1. SITE CONFIG — edit these values
      ------------------------------------------------------------------------ */
   var CONFIG = {
-    bookingWhatsApp: "917799882182",          // all booking messages go here
+    bookingWhatsApp: "919347760620",          // all booking messages go here
     generalWhatsApp: "919347760620",          // general enquiries
     social: {
       // TODO: replace "#" with real profile URLs
       instagram: "#",
       facebook: "#",
       youtube: "#",
-      whatsapp: "https://wa.me/917799882182"
+      whatsapp: "https://wa.me/919347760620"
     }
   };
+
+  /* ------------------------------------------------------------------------
+     1a. HOMEPAGE HERO SLIDES — edit this list to change the background slider.
+         Generic travel / farm-stay imagery. First slide loads eagerly.
+     ------------------------------------------------------------------------ */
+  var HERO_SLIDES = [
+    { src: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=80", alt: "Open countryside at golden hour" },
+    { src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80", alt: "Mountain road winding through the hills" },
+    { src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80", alt: "Quiet coastline at sunrise" },
+    { src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80", alt: "Sunlight through a forest canopy" },
+    { src: "https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1800&q=80", alt: "Open road stretching into the distance" }
+  ];
+
+  /* ------------------------------------------------------------------------
+     1b. CARAVAN PHOTOS — 6-seater gallery (Exterior / Interior tabs).
+         Use https:// URLs only; http:// images are blocked on an https site.
+     ------------------------------------------------------------------------ */
+  var CARAVAN6_PHOTOS = {
+    exterior: [
+      "https://cryptuasolutions.com/saas/caravan6/1.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/2.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/3.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/4.jpeg"
+    ],
+    interior: [
+      "https://cryptuasolutions.com/saas/caravan6/1i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/2i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/3i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/4i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/5i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/6i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/7i.jpeg",
+      "https://cryptuasolutions.com/saas/caravan6/8i.jpeg"
+    ]
+  };
+
+  /* 9-seater photos are not ready yet. When they are, add a matching object
+     here and give the 9-Pax card the same data-gallery markup. */
+  var GALLERIES = { caravan6: CARAVAN6_PHOTOS };
 
   /* ------------------------------------------------------------------------
      2. EXPLORE INDIA — categories and destination data
@@ -347,6 +386,7 @@
     if (data.type === "motorhome" && data.vehicle) type = "Motorhome – " + data.vehicle;
     if (data.type === "farmhouse" && data.farmhouse) type = "Farmhouse Stay – " + data.farmhouse;
     lines.push("• Type: " + type);
+    if (data.type === "motorhome" && data.chauffeur) lines.push("• Chauffeur: " + data.chauffeur);
     lines.push("• Name: " + data.name + " | Phone: " + data.phone);
     var dates = fmtDate(data.start);
     if (data.end) {
@@ -389,7 +429,11 @@
     '<label><input type="radio" name="vehicle" value="Up to 6 Pax" checked><span>Up to 6 Pax</span></label>' +
     '<label><input type="radio" name="vehicle" value="Up to 9 Pax"><span>Up to 9 Pax</span></label>' +
     '</div></fieldset>' +
-    '<div class="field full" data-show="farmhouse"><label for="bkFarm">Farmhouse</label><input id="bkFarm" name="farmhouse" type="text" placeholder="e.g., SAAS Farm Stay, Chevella" autocomplete="off"></div>' +
+    '<fieldset class="field full" data-show="motorhome"><legend>Chauffeur</legend><div class="seg">' +
+    '<label><input type="radio" name="chauffeur" value="With chauffeur" checked><span>With chauffeur</span></label>' +
+    '<label><input type="radio" name="chauffeur" value="Without chauffeur"><span>Without chauffeur (self-drive)</span></label>' +
+    '</div></fieldset>' +
+    '<div class="field full" data-show="farmhouse"><label for="bkFarm">Farmhouse</label><input id="bkFarm" name="farmhouse" type="text" placeholder="e.g., Saras Luxury Farm House" autocomplete="off"></div>' +
     '<div class="field"><label for="bkName">Full name <span class="req">*</span></label><input id="bkName" name="name" type="text" autocomplete="name" required><span class="err">Please enter your name.</span></div>' +
     '<div class="field"><label for="bkPhone">Phone number <span class="req">*</span></label><input id="bkPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile" required><span class="err">Please enter a valid phone number.</span></div>' +
     '<div class="field"><label for="bkStart">Start date <span class="req">*</span></label><input id="bkStart" name="start" type="date" required><span class="err">Please choose a start date (today or later).</span></div>' +
@@ -403,7 +447,7 @@
     '<div class="field full"><label for="bkNotes">Special requests <span style="font-weight:500;color:rgba(38,34,28,.5)">(optional)</span></label><textarea id="bkNotes" name="notes" placeholder="Anything we should know?"></textarea></div>' +
     '<div class="book-actions">' +
     '<button type="submit" class="btn btn-primary"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>Send on WhatsApp</button>' +
-    '<small>Opens WhatsApp with your message to +91 77998 82182. Nothing is sent until you tap send.</small>' +
+    '<small>Opens WhatsApp with your message to +91 93477 60620. Nothing is sent until you tap send.</small>' +
     '</div>' +
     '</form></div></dialog>';
 
@@ -442,6 +486,7 @@
       var data = {
         type: form.querySelector('input[name="type"]:checked').value,
         vehicle: (form.querySelector('input[name="vehicle"]:checked') || {}).value,
+        chauffeur: (form.querySelector('input[name="chauffeur"]:checked') || {}).value,
         farmhouse: form.farmhouse.value.trim(),
         name: form.name.value.trim(), phone: form.phone.value.trim(),
         start: form.start.value, end: form.end.value,
@@ -461,6 +506,7 @@
       var t = opts.type || "motorhome";
       form.querySelector('input[name="type"][value="' + t + '"]').checked = true;
       if (opts.vehicle) { var v = form.querySelector('input[name="vehicle"][value="' + opts.vehicle + '"]'); if (v) v.checked = true; }
+      if (opts.chauffeur) { var c = form.querySelector('input[name="chauffeur"][value="' + opts.chauffeur + '"]'); if (c) c.checked = true; }
       form.farmhouse.value = opts.farmhouse || form.farmhouse.value;
       if (opts.destination !== undefined) form.destination.value = opts.destination;
       applyType();
@@ -477,6 +523,7 @@
       window.SAAS.openBooking({
         type: btn.getAttribute("data-book") || "motorhome",
         vehicle: btn.getAttribute("data-vehicle"),
+        chauffeur: btn.getAttribute("data-chauffeur"),
         farmhouse: btn.getAttribute("data-farmhouse"),
         destination: btn.hasAttribute("data-destination") ? btn.getAttribute("data-destination") : undefined
       }, btn);
@@ -627,6 +674,201 @@
   }
 
   /* ------------------------------------------------------------------------
+     6a. Hero background slider (index only — needs .hero-slider)
+         Decorative: aria-hidden, pauses off-screen, single frame when the
+         visitor prefers reduced motion.
+     ------------------------------------------------------------------------ */
+  var HERO_FALLBACK = "<svg viewBox='0 0 24 24'><path d='M3 17h1v-5l2-5h9l3 4h3v6h-2'/><circle cx='7' cy='17' r='2'/><circle cx='17' cy='17' r='2'/></svg><span>SAAS Adventures</span>";
+
+  function initHeroSlider() {
+    var wrap = $("#heroSlider");
+    if (!wrap || !HERO_SLIDES.length) return;
+
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var slides = (reduced ? HERO_SLIDES.slice(0, 1) : HERO_SLIDES).map(function (s, i) {
+      var fig = document.createElement("div");
+      fig.className = "hero-slide" + (i === 0 ? " is-active" : "");
+      var im = document.createElement("img");
+      im.src = s.src;
+      im.alt = "";
+      im.loading = i === 0 ? "eager" : "lazy";
+      if (i === 0) im.setAttribute("fetchpriority", "high");
+      im.addEventListener("error", function () {
+        fig.innerHTML = "";
+        var fb = document.createElement("div");
+        fb.className = "fallback-panel";
+        fb.innerHTML = HERO_FALLBACK;
+        fig.appendChild(fb);
+      });
+      fig.appendChild(im);
+      wrap.appendChild(fig);
+      return fig;
+    });
+
+    if (slides.length < 2) return;
+
+    var i = 0, timer = null, DELAY = 5600;
+    function advance() {
+      slides[i].classList.remove("is-active");
+      i = (i + 1) % slides.length;
+      slides[i].classList.add("is-active");
+    }
+    function play() { if (!timer) timer = setInterval(advance, DELAY); }
+    function pause() { clearInterval(timer); timer = null; }
+
+    document.addEventListener("visibilitychange", function () {
+      document.hidden ? pause() : play();
+    });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries[0].isIntersecting ? play() : pause();
+      }, { threshold: 0.01 }).observe(wrap);
+    } else { play(); }
+    play();
+  }
+
+  /* ------------------------------------------------------------------------
+     6b. Vehicle photo gallery — Exterior / Interior tabs + snap filmstrip.
+         Mount point: <div class="cv-gallery" data-gallery="caravan6">…</div>
+         Works for any key in GALLERIES, so the 9-Pax card can reuse it.
+     ------------------------------------------------------------------------ */
+  var CV_FALLBACK = "this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<span>Photo coming soon</span>'}))";
+  var cvLightbox = null, cvState = { list: [], i: 0, opener: null };
+
+  function cvEnsureLightbox() {
+    if (cvLightbox) return cvLightbox;
+    document.body.insertAdjacentHTML("beforeend",
+      '<dialog class="lightbox" id="cvLightbox" aria-label="Caravan photo viewer">' +
+      '<button type="button" class="sheet-close" data-cv-close aria-label="Close photo">' + ICON_CLOSE + '</button>' +
+      '<img id="cvLbImg" alt="">' +
+      '<button type="button" class="lb-nav lb-prev" aria-label="Previous photo">‹</button>' +
+      '<button type="button" class="lb-nav lb-next" aria-label="Next photo">›</button>' +
+      '</dialog>');
+    cvLightbox = $("#cvLightbox");
+    var img = $("#cvLbImg", cvLightbox);
+    function show() {
+      var s = cvState.list[cvState.i];
+      img.src = s.src;
+      img.alt = s.alt;
+    }
+    function step(d) {
+      var n = cvState.list.length;
+      cvState.i = (cvState.i + d + n) % n;
+      show();
+    }
+    cvLightbox._show = show;
+    $("[data-cv-close]", cvLightbox).addEventListener("click", function () { cvLightbox.close(); });
+    $(".lb-prev", cvLightbox).addEventListener("click", function () { step(-1); });
+    $(".lb-next", cvLightbox).addEventListener("click", function () { step(1); });
+    cvLightbox.addEventListener("click", function (e) { if (e.target === cvLightbox) cvLightbox.close(); });
+    cvLightbox.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") step(-1);
+      if (e.key === "ArrowRight") step(1);
+    });
+    cvLightbox.addEventListener("close", function () {
+      document.body.classList.remove("dialog-open");
+      if (cvState.opener && document.contains(cvState.opener)) cvState.opener.focus();
+    });
+    return cvLightbox;
+  }
+
+  function initGalleries() {
+    $all("[data-gallery]").forEach(function (root) {
+      var sets = GALLERIES[root.getAttribute("data-gallery")];
+      if (!sets) return;
+
+      var label = root.getAttribute("data-gallery-label") || "caravan";
+      var strip = $(".cv-strip", root);
+      var tabs = $all("[data-cv-tab]", root);
+      var counter = $(".cv-counter", root);
+      var prev = $(".cv-prev", root);
+      var next = $(".cv-next", root);
+      var current = [];
+
+      function render(key, focusStrip) {
+        var urls = sets[key] || [];
+        var noun = key === "interior" ? "interior" : "exterior";
+        current = urls.map(function (u, n) {
+          return { src: u, alt: "SAAS Adventures " + label + ", " + noun + " view " + (n + 1) };
+        });
+        strip.innerHTML = current.map(function (s, n) {
+          return '<button type="button" class="cv-shot" data-cv-idx="' + n + '" aria-label="Open ' + esc(s.alt) + ' full size">' +
+            '<img src="' + esc(s.src) + '" alt="' + esc(s.alt) + '" loading="' + (n === 0 ? "eager" : "lazy") + '" onerror="' + CV_FALLBACK + '">' +
+            '</button>';
+        }).join("");
+        strip.scrollLeft = 0;
+        setCount(0);
+        if (focusStrip) strip.focus();
+      }
+
+      function setCount(n) {
+        if (counter) counter.textContent = (n + 1) + " / " + current.length;
+        if (prev) prev.disabled = n === 0;
+        if (next) next.disabled = n >= current.length - 1;
+      }
+      function activeIndex() {
+        var shots = $all(".cv-shot", strip);
+        if (!shots.length) return 0;
+        var w = shots[0].offsetWidth || 1;
+        return Math.min(shots.length - 1, Math.round(strip.scrollLeft / w));
+      }
+      function scrollBySlide(d) {
+        var shots = $all(".cv-shot", strip);
+        if (!shots.length) return;
+        var target = Math.max(0, Math.min(shots.length - 1, activeIndex() + d));
+        strip.scrollTo({ left: shots[target].offsetLeft - strip.offsetLeft, behavior: "smooth" });
+      }
+
+      var ticking = false;
+      strip.addEventListener("scroll", function () {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function () { setCount(activeIndex()); ticking = false; });
+      }, { passive: true });
+
+      if (prev) prev.addEventListener("click", function () { scrollBySlide(-1); });
+      if (next) next.addEventListener("click", function () { scrollBySlide(1); });
+
+      /* Tabs: click + roving arrow-key navigation */
+      tabs.forEach(function (tab, n) {
+        tab.addEventListener("click", function () { selectTab(n, false); });
+        tab.addEventListener("keydown", function (e) {
+          var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+          if (!d) return;
+          e.preventDefault();
+          selectTab((n + d + tabs.length) % tabs.length, true);
+        });
+      });
+      function selectTab(n, focusTab) {
+        tabs.forEach(function (t, k) {
+          var on = k === n;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          t.tabIndex = on ? 0 : -1;
+        });
+        if (focusTab) tabs[n].focus();
+        if (tabs[n].id) strip.setAttribute("aria-labelledby", tabs[n].id);
+        render(tabs[n].getAttribute("data-cv-tab"), false);
+      }
+
+      /* Open the lightbox on photo click */
+      strip.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-cv-idx]");
+        if (!b) return;
+        var dlg = cvEnsureLightbox();
+        cvState.list = current;
+        cvState.i = +b.getAttribute("data-cv-idx");
+        cvState.opener = b;
+        dlg._show();
+        dlg.showModal();
+        document.body.classList.add("dialog-open");
+      });
+
+      tabs.forEach(function (t, k) { t.tabIndex = k === 0 ? 0 : -1; });
+      render(tabs.length ? tabs[0].getAttribute("data-cv-tab") : "exterior", false);
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      7. Social links + mobile toggle
      ------------------------------------------------------------------------ */
   function initSocial() {
@@ -683,6 +925,8 @@
     initChrome();
     initSocial();
     initBooking();
+    initHeroSlider();
+    initGalleries();
     if (document.getElementById("explore")) initExplore();
     else {
       // Other pages: footer explore links go to index popups
