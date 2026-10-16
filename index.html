@@ -11,7 +11,7 @@
 <meta property="og:description" content="Motorhome &amp; caravan rentals, farmhouse stays and customized adventure trips across India.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.saasadventures.in/">
-<meta property="og:image" content="https://cryptuasolutions.com/saas/s2.jpeg">
+<meta property="og:image" content="https://cryptuasolutions.com/saas/caravan6/1.jpeg">
 
 <script type="application/ld+json">
 {
@@ -21,7 +21,7 @@
   "legalName": "SAAS Adventures Pvt. Ltd.",
   "url": "https://www.saasadventures.in/",
   "logo": "https://cryptuasolutions.com/saas/logo.png",
-  "image": "https://cryptuasolutions.com/saas/s2.jpeg",
+  "image": "https://cryptuasolutions.com/saas/caravan6/1.jpeg",
   "description": "Motorhome and caravan rentals, farmhouse stays and customized adventure trips across India.",
   "slogan": "Travel Freely. Explore More. Create Memories.",
   "telephone": "+91-93477-60620",
@@ -95,8 +95,13 @@
   <!-- ============================ HERO ============================ -->
   <section class="hero" id="home">
     <div class="hero-media">
-      <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures motorhome parked on an open Indian road at golden hour"
-           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>SAAS Adventures</span>'}));">
+      <!-- Slides are built from HERO_SLIDES in main.js. Decorative only. -->
+      <div class="hero-slider" id="heroSlider" aria-hidden="true"></div>
+      <noscript>
+        <div class="hero-slide is-active">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="">
+        </div>
+      </noscript>
     </div>
     <div class="hero-content">
       <div class="container">
@@ -239,11 +244,19 @@
 
       <div class="vehicle-grid">
         <article class="vehicle-card reveal reveal-delay-1">
-          <div class="vehicle-media">
-            <span class="vehicle-badge">Up to 6 Pax</span>
-            <!-- TODO: replace with a photo of the 6-pax caravan -->
-            <img src="https://cryptuasolutions.com/saas/s2.jpeg" alt="SAAS Adventures caravan for up to 6 guests" loading="lazy"
-                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback-panel',innerHTML:'<svg viewBox=\'0 0 24 24\'><path d=\'M3 17h1v-5l2-5h9l3 4h3v6h-2\'/><circle cx=\'7\' cy=\'17\' r=\'2\'/><circle cx=\'17\' cy=\'17\' r=\'2\'/></svg><span>Up to 6 Pax</span>'}));">
+          <!-- Photos come from CARAVAN6_PHOTOS in main.js -->
+          <div class="cv-gallery" data-gallery="caravan6" data-gallery-label="6-seater caravan">
+            <div class="vehicle-media cv-stage">
+              <span class="vehicle-badge">Up to 6 Pax</span>
+              <div class="cv-strip" id="cv6Strip" role="tabpanel" tabindex="0" aria-labelledby="cv6TabExterior"></div>
+              <button type="button" class="cv-arrow cv-prev" aria-label="Previous photo">‹</button>
+              <button type="button" class="cv-arrow cv-next" aria-label="Next photo">›</button>
+              <span class="cv-counter" aria-hidden="true"></span>
+            </div>
+            <div class="cv-tabs" role="tablist" aria-label="Caravan photo categories">
+              <button type="button" class="cv-tab" role="tab" id="cv6TabExterior" data-cv-tab="exterior" aria-controls="cv6Strip" aria-selected="true">Exterior</button>
+              <button type="button" class="cv-tab" role="tab" id="cv6TabInterior" data-cv-tab="interior" aria-controls="cv6Strip" aria-selected="false">Interior</button>
+            </div>
           </div>
           <div class="vehicle-body">
             <h3>Caravan — Up to 6 Pax</h3>
@@ -414,13 +427,13 @@
           <div class="whatsapp-card">
             <strong>SAAS Adventures</strong>
             <span>Your Home on the Road.</span>
-            <span class="whatsapp-number">+91 77998 82182</span>
+            <span class="whatsapp-number">+91 93477 60620</span>
           </div>
           <button type="button" class="btn btn-primary whatsapp-btn" data-book="motorhome">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
             Plan &amp; Book on WhatsApp →
           </button>
-          <a class="whatsapp-secondary" href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer">or just chat with us on WhatsApp</a>
+          <a class="whatsapp-secondary" href="https://wa.me/919347760620?text=Hi%20SAAS%20Adventures!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer">or just chat with us on WhatsApp</a>
           <p class="contact-note">Fill in a short form and we'll prepare your WhatsApp message with all your trip details.</p>
         </div>
       </div>
@@ -432,23 +445,18 @@
             <span class="card-links"><a href="tel:+919347760620">Call</a><a href="https://wa.me/919347760620" target="_blank" rel="noopener noreferrer">WhatsApp</a></span></span>
         </div>
         <div class="info-card">
-          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg></span>
-          <span><small>Bookings (WhatsApp)</small><strong class="nowrap">+91 77998 82182</strong>
-            <span class="card-links"><a href="https://wa.me/917799882182" target="_blank" rel="noopener noreferrer">Message us</a></span></span>
-        </div>
-        <div class="info-card">
           <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
           <span><small>Email</small><strong class="nowrap">info@saasadventures.com</strong>
             <span class="card-links"><a href="mailto:info@saasadventures.com">Send an email</a></span></span>
+        </div>
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <span><small>Business Hours</small><strong>Monday – Sunday</strong><span class="card-sub">9:00 AM – 9:00 PM</span></span>
         </div>
         <div class="info-card wide">
           <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
           <span><small>Location</small><strong>SAAS Adventures Pvt. Ltd., Sy. No. 203/AA/1/1, Aloor Village, Chevella, Ranga Reddy, Telangana – 501503, India</strong>
             <span class="card-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Aloor+Village+Chevella+Ranga+Reddy+Telangana+501503" target="_blank" rel="noopener noreferrer">Get Directions</a></span></span>
-        </div>
-        <div class="info-card">
-          <span class="info-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <span><small>Business Hours</small><strong>Monday – Sunday</strong><span class="card-sub">9:00 AM – 9:00 PM</span></span>
         </div>
       </div>
 
@@ -534,7 +542,7 @@
 </div>
 
 <!-- Floating WhatsApp (bottom-right) -->
-<a href="https://wa.me/917799882182?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20and%20farm%20stay%20experiences." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with SAAS Adventures on WhatsApp">
+<a href="https://wa.me/919347760620?text=Hi%20SAAS%20Adventures!%20I'd%20like%20to%20know%20more%20about%20your%20motorhome%20and%20farm%20stay%20experiences." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with SAAS Adventures on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 4.9 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15.1 3.6 13.6 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.3-8.4 8.3z"/></svg>
 </a>
 
